@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade IMC</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="total">
+        <h1>Atividade sobre IMC - 11/08/2026</h1>
+
+        <div class="enunciado">
+            <p>Crie o projeto na UC3.</p>
+            <p>Faça inputs para altura e peso.</p>
+            <p>Faca o cálculo IMC = peso / altura².</p>
+            <p>Faça com que o <body> fique com a cor da situação da pessoa.</p>
+        </div>
+
+        <div class="tabela">
+            <table>
+                <tr>
+                    <th>Valor do IMC</th>
+                    <th>Classificação</th>
+                </tr>
+                <tr>
+                    <td>Menor que 18,5</td>
+                    <td>Baixo peso</td>
+                </tr>
+                <tr>
+                    <td>De 18,5 a 24,9</td>
+                    <td>Normal</td>
+                </tr>
+                <tr>
+                    <td>De 25 a 29,9</td>
+                    <td>Sobrepeso</td>
+                </tr>
+                <tr>
+                    <td>Maior que 30</td>
+                    <td>Obesidade</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="calculos">
+            <h1>Cálculo do IMC</h1>
+            <form action="">
+                <label for="peso">Digite seu Peso(kg)</label>
+                <input type="number" name="peso" id=peso>
+
+                <label for="altura">Digite sua Altura(m)</label>
+                <input type="number" name="altura" id=altura>
+            </form>
+
+            <button id="calcular" onclick="calcularImc()">Calcular</button>
+            <h1 id="resultado"></h1>
+            <h1 id="situacao"></h1>
+        </div>
+    </div>
+
+
+    <script src="script/script.js"></script>
+</body>
+</html>

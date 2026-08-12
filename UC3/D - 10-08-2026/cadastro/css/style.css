@@ -1,0 +1,84 @@
+body{
+    background-image: url("https://image.api.playstation.com/vulcan/ap/rnd/202605/1114/480f2aed51812c6a06fba15842c281d51a1ea53e7e908435.png");
+    background-size: cover;
+    /*todo Para usar toda a vertical do site */
+    height: 100vh;
+    display: flex;
+    /*todo Centralizando verticalmente e horizontalmente */
+    justify-content: center;
+    align-items: center;
+}
+
+/*^ * = São todas as TAGS */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    /*todo red-green-blue-alpha(transparência) */
+    /*todo As cores são de 0 até 255 */
+    /*todo Alpha (transparência) é de 0 a 1 (0% até 100%) */
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid black;
+    padding: 30px;
+    border-radius: 15px;
+    /*todo Desvio horizontal - Vertical - Esfumaçado (quanto maior o número mais fraco fica) - Cor */
+    box-shadow: 2px 2px 30px rgb(50, 0, 0);
+    color: white;
+}
+
+form{
+    margin-top: 30px;
+    /*todo Organizar os label e input um embaixo do outro */
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    gap: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+label{
+    letter-spacing: 2px;
+}
+
+input{
+    width: 500px;
+    padding: 3px;
+    font-size: 20px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    padding-left: 8px;
+    text-shadow: 2px 2px 1px black;
+}
+
+#enviar{
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid white;
+    margin-top: 40px;
+    font-size: 18px;
+    padding: 16px;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#enviar:hover{
+    color:rgb(140, 0, 0);
+    background-color: rgb(40, 0, 0);
+    font-size: 22px;
+}
+
+h1{
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Tahoma';
+}

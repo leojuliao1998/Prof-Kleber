@@ -1,0 +1,238 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background-color: rgb(223, 223, 223);
+    color: rgb(48, 48, 48);
+    margin: 0;
+    padding: 0;
+}
+
+.logo{
+    margin: 5px 5px;
+    width: 110px;
+    border-radius: 60px;
+    border: 1px solid white;
+}
+
+header{
+    background-color: rgb(133, 133, 133);
+    /*^ Position Fixed - Mantém ela fixa ao rolar a página */
+    position: fixed;
+    /*^ Usando o Position Fixed - temos acesso a propriedas exclusivas */
+    /** Por ter ativado o fixed eu posso colocar a distância dele perante os cantos da tela */
+    /** top: 0 diz que ele é 0px longe do topo da página, isso quer dizer que é colado ao topo */
+    top: 0;
+    /** left: 0 diz que ele é 0px longe do lado esquerdo da página, isso quer dizer que é colado ao lado esquerdo da página */
+    left:0;
+    /*^ Largura 100% oara ocupar toda a página em horizontal */
+    width: 100%;
+}
+
+/** Para colocar ao lado da imagem */
+nav{
+    display: inline;
+}
+
+.menu{
+    /*^ Tirando pontinhos da lista */
+    list-style-type: none;
+    /*^ Fazer com que a lista em si se torne "inline" */
+    /*^ Aceita ficar ao lado da imagem */
+    display:inline;
+    /** Posição a vontade */
+    position: absolute;
+    right: 20px;
+    top: 25px;
+}
+
+/*^ Seleção de hierarquia */
+/** Estamos editando os <li> dentro do .menu */
+.menu li{
+    display: inline;
+    font-size: 22px;
+    border: 2px solid rgb(94, 94, 94);
+    border-radius: 15px;
+    background-color: rgb(94, 94, 94);
+    padding: 5px;  
+}
+
+/** Editando os <a> dentro de <li> dentro de .menu */
+.menu li a{
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size: 22px;
+    color: white
+}
+
+.menu li a:hover{
+    font-size: 28px;
+    color: rgb(36, 36, 36)
+}
+
+/*^ Deixa o link da página atual única */
+/*^ Seleção ID: Usamos # */
+#atual{
+    text-decoration: underline;
+    color:rgb(51, 0, 117)
+}
+
+.card h1{
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.banner{
+    width: 100%;
+}
+
+/** 28-05-2026 */
+
+.servicos{
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 90px;
+    /*^ Não vai usar toda a largura da tela, apenas 80% */
+    width: 80%;
+    margin: auto; /*^ Centraliza o <div> */
+    /*^ Espaço vazio entre ele e o banner */
+    margin-top: 30px;
+    /*^ Espaço interno ou "gordurinha" */
+    /*^ Ele também faz com que o conteúdo (os cards dentro) comecem mais longe da borda/parede */
+    padding: 80px;
+    text-align: center;
+    /*^ Organiza seus filhos em caixas flexiveis */
+    /*^ Seus filhos são os <div class="card"> */
+    display: flex;
+}
+
+.card{
+    margin-right: 30px;
+    margin-left: 30px;
+    flex: 1;
+}
+
+.icone-servico:hover{
+    width: 250px;
+    border: 3px solid grey;
+    border-radius: 1000px;
+    box-shadow: 0px 0px 60px rgb(199, 199, 199);
+}
+
+.icone-servico{
+    width: 200px;
+    border: 3px solid grey;
+    border-radius: 1000px;
+    transition: 0.3s;
+}
+
+/*!-- 11/06/2026 --*/
+.sobre-empresa{
+    background-color: white;
+    border-radius: 100px;
+    width: 80%;
+    margin: auto; /*? Centralizar a div */
+    margin-top: 30px;
+    padding: 40px; /*? Distancia entre o conteúdo e a borda */
+    display: flex; /*? Contrai os filhos <divs> para alinhá-los lateralmente*/
+    align-items: center; /*? Alinha verticalemnte os itens apartir do display:flex */
+}
+
+/*? Lembrando: .texto-sobre é filho de sobre-empresa */
+/*? Quer dizer que ele está sendo organizado pelo display:flex no pai dele */
+.texto-sobre{
+    /*? A propriedade abaixo dele só funciona para filhos de flex */
+    /*? flex:2 quer dizer que ele é o dobro de tamanho de seu irmão */
+    flex: 2;
+}
+
+.texto-sobre h2{
+    color: rgb(78, 50, 104);
+    font-size: 30px;
+    /*! Espaço entre cada linha (Textos grandes) */
+    /*! 1.5 = 150% de espaço (1 = 100% é o original) */
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.imagem-sobre{
+    flex: 1;
+    text-align: center;
+}
+
+.imagem-sobre img{
+    width: 300px;
+}
+
+/*! Sessão Missão */
+
+.missao-valores{
+    /*! Para diminuir seu <div> é preciso combinar: */
+    /*& Diminuir o seu width (para sobrar espaço na horizontal) */
+    /*& E margin auto (Deixar espaço livre igual entre left e right) */
+    width: 80%;
+    margin: auto;
+    /*! Margin-top -> distanciar com o conteúdo acima */
+    margin-top: 30px;
+    padding: 40px;
+
+    /*! Contrair lateralmente o <div> filhos */
+    display: auto;
+    /*! A prorpiedade "GAP" só funciona quando se ativa o FLEX */
+    /*! Distancia entre os filhos organizados pelo FLEX */
+    gap: 20px;
+}
+
+.caixa-info{
+    background-color: rgb(58, 58, 58);
+    color: rgb(218, 218, 218);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    flex: 1;
+    /*! O quão para direita, o quão para baixo e quão esfumaçado é a cor */
+    box-shadow: 2px 2px 15px black;
+}
+
+.caixa-info h2{
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+/*! Sessão Contato */
+.contato{
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.contato h2{
+    color:rgb(0, 0, 0);
+    font-size: 30px;
+}
+
+/*! Editando o link */
+.botao-contato{
+    background-color: rgb(46, 46, 46);
+    color: grey;
+    /*! Retira o sublinhado */
+    text-decoration: none;
+    /*! padding com 2 valores são dois eixos: vertical e horizontal */
+    /*! 15px - vertical e 30px - horizontal */
+    padding: 15px 30px;
+    border-radius: 10px;
+    /*! inline-block: pode mudar tamanho mas aceita ao lado */
+    display: inline-block;
+    margin-top: 15px;
+    transition: all 0.4s;
+}
+
+.botao-contato:hover{
+    background-color:grey;
+    color:black;
+    font-size: 18px;
+}

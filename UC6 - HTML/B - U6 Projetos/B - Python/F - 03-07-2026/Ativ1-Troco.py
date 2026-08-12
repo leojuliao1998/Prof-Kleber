@@ -1,0 +1,33 @@
+compra = float(input("Digite o valor da compra(R$): "))
+dinheiro_do_cliente = float(input("Valor dado para pagamento(R$): "))
+
+troco = dinheiro_do_cliente - compra
+print(f"O troco é {troco:.2f}")
+if dinheiro_do_cliente - compra:
+    print("Dinheiro insuficiente.")
+
+quant_100 = int(troco/100)
+quant_50 = int(troco/50)
+quant_20 = int(troco/20)
+quant_10 = int(troco/10)
+quant_5 = int(troco/5)
+quant_2 = int(troco/2)
+quant_1 = int(troco/1)
+quant_050 = int(troco/0.50)
+quant_025 = int(troco/0.25)
+quant_010 = int(troco/0.10)
+quant_005 = int(troco/0.05)
+quant_001 = int(troco/0.01)
+
+print(quant_100, "nota(s) de R$ 100.00")
+print(quant_50, "nota(s) de R$ 50.00")
+print(quant_20, "nota(s) de R$ 20.00")
+print(quant_10, "nota(s) de R$ 10.00")
+print(quant_5, "nota(s) de R$ 5.00")
+print(quant_2, "nota(s) de R$ 2.00")
+print(quant_1, "moeda(s) de R$ 1.00")
+print(quant_050, "moeda(s) de R$ 0.50")
+print(quant_025, "moeda(s) de R$ 0.25")
+print(quant_010, "moeda(s) de R$ 0.10")
+print(quant_005, "moeda(s) de R$ 0.05")
+print(quant_001, "moeda(s) de R$ 0.01")

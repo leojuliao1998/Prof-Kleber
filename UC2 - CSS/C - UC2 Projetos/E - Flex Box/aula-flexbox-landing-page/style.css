@@ -1,0 +1,891 @@
+/* =====================================================
+   RESET E CONFIGURAÇÕES GERAIS
+   Estilos visuais básicos — sempre ativos.
+   Propriedades Flexbox ficam comentadas nas seções abaixo.
+===================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Paleta de cores moderna */
+    --bg-page: #f5f7fb;
+    --text-primary: #172033;
+    --text-secondary: #64748b;
+    --blue: #2563eb;
+    --blue-dark: #1d4ed8;
+    --purple: #7c3aed;
+    --green: #10b981;
+    --card-bg: #ffffff;
+    --border: #e2e8f0;
+    --shadow: 0 4px 20px rgba(23, 32, 51, 0.08);
+    --shadow-hover: 0 8px 30px rgba(23, 32, 51, 0.12);
+    --radius: 12px;
+    --radius-lg: 16px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =====================================================
+   COMPONENTES REUTILIZÁVEIS (botões, títulos)
+===================================================== */
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--blue);
+    border-color: var(--blue);
+}
+
+.btn-outline:hover {
+    background: rgba(37, 99, 235, 0.08);
+}
+
+.btn-small {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    background: var(--blue);
+    color: #fff;
+    border-radius: 6px;
+}
+
+.btn-small:hover {
+    background: var(--blue-dark);
+}
+
+.btn-nav {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+.section-header p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+
+    background-clip: text;
+}
+
+
+/* =====================================================
+   NAVBAR — AULA FLEX 01
+   Objetivo: mostrar display, justify, align, gap e wrap
+===================================================== */
+
+.navbar {
+    background-color: var(--card-bg);
+    padding: 16px 32px;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    /*
+    AULA FLEX 01 — display: flex
+
+    Ao descomentar a linha abaixo, este elemento vira um container flex.
+    Isso faz com que seus filhos diretos fiquem organizados no eixo principal.
+
+    Experimente descomentar:
+    */
+
+    display: flex;
+
+    /*
+    justify-content controla o alinhamento no eixo principal.
+    Teste uma opção por vez:
+    */
+
+    /* justify-content: flex-start; -> mantem a esquerda */
+    /* justify-content: center; -> centraliza */
+    /* justify-content: flex-end; -> vai para o lado direito */
+    justify-content: space-between;/* -> espaço de fora igual ao espço de dentro */
+    /* justify-content: space-around; -> o espaço de dentro aumenta em relação ao espaço de fora */
+    /* justify-content: space-evenly; -> o espaço ao redor aumenta em relação ao espaço de dentro */
+
+    /*
+    align-items controla o alinhamento no eixo cruzado.
+    */
+
+    /* align-items: flex-start; */
+    align-items: center; /* alinhamento em relação a linha */
+    /* align-items: flex-end; */
+
+    /*
+    gap cria espaço entre os itens sem precisar usar margin em cada filho.
+    */
+
+    /* gap: 50px; */
+
+    /*
+    flex-wrap permite quebrar linha quando não couber na tela.
+    */
+
+    /* flex-wrap: wrap; */
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.nav-menu a {
+    color: var(--text-secondary);
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: color 0.2s, background 0.2s;
+}
+
+.nav-menu a:hover {
+    color: var(--blue);
+    background: rgba(37, 99, 235, 0.08);
+}
+
+
+/* =====================================================
+   HERO — AULA FLEX 02
+   Objetivo: duas colunas com flex-direction
+===================================================== */
+
+.hero {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 64px 24px 80px;
+
+    /*
+    AULA FLEX 02 — Hero com duas colunas
+
+    Ao descomentar display flex, o texto e a ilustração ficam lado a lado.
+    */
+
+    display: flex;
+
+    /*
+    flex-direction define a direção do eixo principal.
+    Teste uma opção por vez:
+
+    row            → coloca os blocos lado a lado (horizontal)
+    row-reverse    → inverte a ordem horizontal (direita → esquerda)
+    column         → coloca um bloco abaixo do outro (vertical)
+    column-reverse → inverte a ordem vertical (de baixo para cima)
+    */
+
+    /* flex-direction: row; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+
+    /*
+    justify-content organiza os blocos no eixo principal.
+    */
+
+    justify-content: space-between;
+    /* justify-content: center; */
+
+    /*
+    align-items organiza os blocos no eixo cruzado.
+    */
+
+    /* align-items: center; */
+    /* align-items: flex-start; */
+    /* align-items: flex-end; */
+
+    /*
+    gap controla o espaço entre o texto e a ilustração.
+    */
+
+    /* gap: 40px; */
+}
+
+.hero-content {
+    max-width: 540px;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--blue);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 2.75rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 32px;
+}
+
+.hero-buttons {
+    /* Botões lado a lado — pode descomentar para demonstrar flex nos botões */
+    display: flex;
+    /* gap: 100px; */
+    /* flex-wrap: wrap; */
+}
+
+.hero-buttons .btn {
+    margin-right: 12px;
+    margin-bottom: 12px;
+}
+
+/* Caixa visual simulando código/ilustração */
+.hero-visual {
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    margin-top: 40px;
+    max-width: 420px;
+}
+
+.visual-header {
+    background: #1e293b;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.dot-red    { background: #ef4444; }
+.dot-yellow { background: #eab308; }
+.dot-green  { background: #22c55e; }
+
+.visual-title {
+    color: #94a3b8;
+    font-size: 0.8rem;
+    margin-left: 8px;
+    font-family: 'Consolas', monospace;
+}
+
+.visual-body {
+    padding: 24px;
+
+    /*
+    Mini demonstração de flex dentro da ilustração.
+    Descomente para mostrar flex-wrap na caixa visual:
+    */
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* gap: 12px; */
+}
+
+.visual-item {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(124, 58, 237, 0.08));
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+}
+
+.visual-icon {
+    margin-right: 8px;
+}
+
+
+/* =====================================================
+   BENEFÍCIOS — AULA FLEX 03 E 04
+   Container (.benefits-list) e cards (.benefit-card)
+===================================================== */
+
+.benefits {
+    background: var(--card-bg);
+}
+
+.benefits-list {
+    /*
+    AULA FLEX 03 — Cards lado a lado
+
+    Sem flex, os cards seguem o fluxo padrão (empilhados).
+    Com flex, conseguimos organizar os cards na horizontal.
+    */
+
+    display: flex;
+
+    /*
+    Teste diferentes formas de distribuir os cards:
+    */
+
+    /* justify-content: flex-start; */
+    /* justify-content: center; */
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    /* justify-content: space-evenly; */
+
+    /*
+    Alinhamento vertical dos cards:
+    */
+
+    /* align-items: stretch; */
+    /* align-items: flex-start; */
+    /* align-items: center; */
+    /* align-items: flex-end; */
+
+    /*
+    Espaçamento entre cards:
+    */
+
+    gap: 70px;
+
+    /*
+    Permitir quebra de linha em telas menores:
+    */
+
+    /* flex-wrap: wrap; */
+}
+
+.benefit-card {
+    background: var(--bg-page);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px 24px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 16px;
+
+    /*
+    AULA FLEX 04 — Card como container flex
+
+    O card também pode usar flex para organizar o ícone, título e texto.
+    */
+
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* gap: 10px; */
+}
+
+.benefit-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.benefit-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.benefit-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.benefit-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+
+/* =====================================================
+   CURSOS — AULA FLEX 05 E 06
+   flex-wrap, gap e propriedades flex nos itens
+===================================================== */
+
+.courses-grid {
+    /*
+    AULA FLEX 05 — flex-wrap
+
+    Aqui queremos uma lista de cursos que quebre linha automaticamente.
+    Apesar do nome "grid", usamos APENAS Flexbox — sem CSS Grid!
+    */
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
+.course-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 20px;
+
+    /*
+    AULA FLEX 06 — flex nos itens
+
+    A propriedade flex é aplicada no ITEM, não no container.
+    flex: 1 1 1200px;
+
+    Significa:
+    flex-grow: 1;     -> pode crescer
+    flex-shrink: 1;   -> pode diminuir
+    flex-basis: 250px; -> tamanho inicial/base
+    */
+
+    flex: 1 1 300px;
+
+    /*
+    Teste também separadamente:
+    */
+
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
+    /* flex-basis: 250px; */
+
+    /*
+    Limita o crescimento máximo do card:
+    */
+
+    max-width: 300px;
+}
+
+.course-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.course-featured {
+    border-color: var(--blue);
+    background: linear-gradient(180deg, rgba(37, 99, 235, 0.04) 0%, var(--card-bg) 100%);
+}
+
+.course-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.course-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+}
+
+.course-card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+}
+
+.course-level {
+    display: inline-block;
+    background: rgba(16, 185, 129, 0.12);
+    color: var(--green);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.course-featured .course-level {
+    background: rgba(37, 99, 235, 0.12);
+    color: var(--blue);
+}
+
+
+/* =====================================================
+   ESTATÍSTICAS — AULA FLEX 07
+   space-between, space-around, space-evenly
+===================================================== */
+
+.stats {
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+    color: #fff;
+}
+
+.stats-list {
+    /*
+    AULA FLEX 07 — Distribuição de estatísticas
+
+    Aqui é um bom exemplo para mostrar space-between, space-around e space-evenly.
+    */
+
+    display: flex;
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    justify-content: space-evenly;
+    /* align-items: center; */
+    /* gap: 20px; */
+    /* flex-wrap: wrap; */
+}
+
+.stat-item {
+    text-align: center;
+    padding: 24px 16px;
+    margin-bottom: 16px;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+
+/* =====================================================
+   PASSOS — AULA FLEX 08 E 09
+   order nos itens + flex-direction na lista
+===================================================== */
+
+.steps {
+    background: var(--card-bg);
+}
+
+.steps-list {
+    /*
+    AULA FLEX 09 — Passos em linha ou coluna
+    */
+
+    display: flex;
+    flex-direction: row;
+    /* flex-direction: column; */
+    gap: 50px;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+}
+
+.step {
+    background: var(--bg-page);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    margin-bottom: 16px;
+    transition: border-color 0.2s;
+}
+
+.step:hover {
+    border-color: var(--blue);
+}
+
+.step-number {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.step h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.step p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/*
+AULA FLEX 08 — order
+
+A propriedade order muda a ordem VISUAL dos itens.
+Ela é aplicada nos ITENS FLEX, não no container.
+
+Importante:
+A ordem muda visualmente, mas a ordem no HTML continua a mesma.
+
+Descomente o bloco abaixo para inverter a ordem dos passos:
+*/
+
+/* .step-1 {
+    order: 4;
+}
+
+.step-2 {
+    order: 3;
+}
+
+.step-3 {
+    order: 2;
+}
+
+.step-4 {
+    order: 1;
+} */
+
+
+/* =====================================================
+   DEPOIMENTOS — AULA FLEX 10
+   align-self em itens individuais
+===================================================== */
+
+.testimonials-list {
+    /*
+    Para align-self ficar mais visível, o container precisa ter altura maior.
+    */
+
+    display: flex;
+    align-items: stretch;
+    gap: 80px;
+    min-height: 320px;
+    /* flex-wrap: wrap; */
+}
+
+.testimonial {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+}
+
+.testimonial-text {
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.author-avatar {
+    font-size: 2rem;
+}
+
+.testimonial-author strong {
+    display: block;
+    font-size: 0.95rem;
+}
+
+.testimonial-author span {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/*
+AULA FLEX 10 — align-self
+
+align-self permite que um item específico tenha um alinhamento
+diferente dos outros. Ele é aplicado no ITEM FLEX.
+
+Descomente junto com display: flex e min-height em .testimonials-list:
+*/
+
+.testimonial-a {
+    align-self: flex-start;
+}
+
+.testimonial-b {
+    align-self: center;
+}
+
+.testimonial-c {
+    align-self: flex-end;
+}
+
+
+/* =====================================================
+   FOOTER — AULA FLEX 11
+   Organização com justify-content e flex-wrap
+===================================================== */
+
+.footer {
+    background: var(--text-primary);
+    color: #94a3b8;
+    padding: 48px 0 0;
+}
+
+.footer-inner {
+    /*
+    AULA FLEX 11 — Footer organizado com Flexbox
+    */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-bottom: 32px;
+}
+
+.footer-brand strong {
+    display: block;
+    color: #fff;
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+}
+
+.footer-brand p {
+    font-size: 0.9rem;
+    max-width: 280px;
+}
+
+.footer-links {
+    /* Links do footer também podem usar flex: */
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    display: block;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.footer-social {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-social a {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-right: 8px;
+    transition: transform 0.2s;
+}
+
+.footer-social a:hover {
+    transform: scale(1.15);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px 24px;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE — AULA FLEX 12
+   flex-direction: column em telas menores
+===================================================== */
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .section {
+        padding: 56px 0;
+    }
+
+    /*
+    AULA FLEX 12 — Responsividade com flex-direction
+
+    Em telas menores, muitos layouts que estavam em row
+    ficam melhores em column.
+
+    Flexbox facilita muito a responsividade: basta mudar
+    flex-direction de row para column, sem alterar o HTML.
+
+    Descomente os blocos abaixo após ativar display: flex
+    nas seções correspondentes:
+    */
+
+    /*
+    .hero {
+        flex-direction: column;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+    }
+    */
+}

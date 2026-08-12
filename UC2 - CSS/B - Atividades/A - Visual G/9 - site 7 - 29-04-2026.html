@@ -1,0 +1,106 @@
+<html>
+
+<head>
+	<title>Listas no HTML</title>
+	<style>
+		body {
+			background-color:202940;
+			color: white;
+			font-family: arial;
+			border: 3px solid #72BAA9;
+		}
+		h1 {
+			text-align: center;
+			font-size: 64px;
+			text-transform: uppercase;
+			letter-spacing: 4px;
+			color: 03AED2;
+			
+		}
+		ol {
+			text-align: center;
+			border: 1px solid #D552A3;
+			border-radius: 20px;
+			padding: 10px;
+			
+		}
+		li {
+			font-size: 22px;
+			margin-left: 30px;
+			letter-spacing: 2px;
+						
+		}
+		.paises{
+			color: lime;
+			background-color: 410445;
+		}
+				/* Estamos editando o <li> mas que está dentro do class= paises*/
+		.paises li{
+			border: 3px solid white;
+				/*Estilo do simbolo da lista*/
+			list-style-type: none;
+			font-size: 24px;
+			
+		}
+		.jogos{
+			color: crimson;
+			background-color: 410445;
+		}
+		.jogos li{
+			border-bottom: 2px solid lightblue;
+			font-size: 24px;
+				/*Tempo de transição para acontecer a animação - 0.2s = 0.2 segundos para mudar a cor e o tamanho*/
+			transition: all 0.2s;
+			
+		}
+				/* Para conseguir deixar um comentário dentro do código, sem aparecer no site final*/
+				/*Animação ao passar o mouse sobre*/
+				/*Houver => Ao passar o mouse em cima do <li>*/
+		.jogos li:hover{
+			color:yellow;
+			font-size: 30px;
+			
+		}
+		
+	</style>
+</head>
+
+<body>
+	<h1>Pratos Favoritos</h1>
+	<ol>
+		<li>Strogonoff de carne</li>
+		<li>Lasanha</li>
+		<li>Pizza 4 queijos</li>
+		<li>Comida japonesa</li>
+		<li>Batata recheada de caprese</li>	
+	</ol>
+	<h1>Filmes Favoritos</h1>
+	<ol>
+		<li>Harry Potter e as Relíquias da Morte Parte 2</li>
+		<li>Cada um Tem a Gêmea que Merece</li>
+		<li>Click</li>
+	</ol>
+	<h1>Países que quero visitar</h1>
+	<ul class="paises">
+		<li>Coréia do Sul</li>
+		<li>Japão</li>
+		<li>Tailândia</li>
+		<li>China</li>
+		<li>Marrocos</li>
+		<li>Índia</li>
+		<li>Estados Unidos</li>
+	</ul>
+	<h1>Jogos Favoritos</h1>
+	<ul class="jogos">
+		<li>GTA San Andreas</li>
+		<li>Crash Bandicoot</li>
+		<li>Eragon</li>
+		<li>Dragon Ball</li>
+		<li>Need For Speed</li>
+		<li>Resident Evil 4</li>
+		<li>God Of War II</li>
+	</ul>
+
+
+</body>
+</html>

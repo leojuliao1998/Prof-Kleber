@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+    <style>
+        /*Comentários no CSS*/
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgba(110, 0, 0, 0.945);
+
+        }
+        
+        h1{
+            font-size: 58px;
+            text-align: center;
+            border: 3px solid rgb(185, 133, 0);
+            margin-top: 20px;
+
+        }
+
+        h2{
+            text-transform: uppercase;
+            letter-spacing: 3px;
+
+        }
+
+        /*Seleção especial: as <img> dentro de <table>*/
+        /*Quando usamos espaço estamos editando a mais à direita o
+        espaço significa "Filho de ..."*/
+        table img{
+            width: 300px;
+            border-radius: 20px;
+            border: solid 5px white;
+
+        }
+        /*A seleção é a tabela que tenha a classe "filmes"*/
+        .filmes{
+            width: 100%; /*Vamos dizer para ele usar toda a largura do site*/
+            border: 5px solid rgb(0, 255, 242);
+            text-align: center;
+            border-collapse: collapse; /*Unindo as bordas*/
+        }
+        /*Aplicando a mesma configuração em duas seleções ao mesmo tempo*/
+        /*Usamos a VÍRGULA para aplicar em dois ao mesmo tempo*/
+        /*Essa aplicação é muito utilizada em padronizações*/
+        th, td{
+            padding: 15px; /*Espaçamento interno*/
+            font-size: 30px;
+            border: solid 5px rgb(0, 255, 242); /*Bordas entre os <th> e os <td>*/
+
+        }
+        tbody tr{
+            background-color: blueviolet;
+            
+        }
+
+        /*Editando as linhas <tr> porém só do <tbody>*/
+        tbody tr:hover{
+            /*Anulando cor de fundo = none*/
+            /*Hover - Como ele ficará ao passar o mouse em cima*/
+            background-color: rgb(0, 224, 149);
+            color: white;
+            transition: all 0.6s
+
+        }
+        /*Editando as linhas <tr> porém só do <thead>*/
+        thead tr{
+            background-color: rgb(229, 63, 63);
+            color: black
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <!--Comentários no HTML-->
+    <h1>Tabela no HTML</h1>
+    <h2>Existem diversas "Tags" para montar uma tabela</h2>
+
+    <h1>Top 5 filmes</h1>
+        
+        <table class="filmes"><!-- table = tabela-->
+            <thead><!--Cabeça da tabela - Representa os "atributos" da tabela-->
+                <tr><!--Table Row - Linha da Tabela-->
+                    <th>Nome do filme</th><!--Table Heading - Títulos da tabela - Representa as colunas da tabela-->
+                    <th>Capa</th>
+                    <th>Gênero</th>
+                </tr>
+            </thead>
+            <tbody><!--Corpo da tabela - Representa o "conteúdo" da tabela-->
+                <tr>
+                    <td>Matrix</td><!--Table Data - Dados-->
+                    <td><img src="https://upload.wikimedia.org/wikipedia/pt/c/c1/The_Matrix_Poster.jpg"></td>
+                    <td>Ação / Ficção Científica</td>
+                </tr>
+                <tr>
+                    <td>Harry Potter</td>
+                    <td><img src="https://i.pinimg.com/564x/63/9b/38/639b38e804524723ca84580dc73c37bf.jpg"></td>
+                    <td>Fantasia / Aventura</td>     
+                </tr>
+
+            </tbody>
+        </table>
+
+
+</body>
+</html>

@@ -1,0 +1,723 @@
+/* ================================================================
+   FLEXBOX PLAYGROUND — Folha de estilos didática
+   ================================================================
+   CONCEITOS IMPORTANTES:
+
+   CONTAINER FLEX → elemento pai com display: flex
+   ITENS FLEX     → filhos diretos do container flex
+
+   EIXO PRINCIPAL  → direção definida por flex-direction
+   EIXO CRUZADO    → perpendicular ao eixo principal
+
+   PROPRIEDADES DO CONTAINER: display, flex-direction, justify-content,
+                              align-items, align-content, flex-wrap, gap
+
+   PROPRIEDADES DOS ITENS: flex-grow, flex-shrink, flex-basis, flex,
+                           order, align-self
+   ================================================================ */
+
+
+/* ----------------------------------------------------------------
+   RESET BÁSICO E ESTILOS GLOBAIS
+   ---------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8; /* Fundo claro, confortável para leitura */
+    color: #2d3748;
+    line-height: 1.6;
+}
+
+/* Container centralizado com largura máxima */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+code {
+    background-color: #e2e8f0;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: #4a5568;
+}
+
+
+/* ----------------------------------------------------------------
+   CABEÇALHO E RODAPÉ DA PÁGINA
+   ---------------------------------------------------------------- */
+.pagina-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    padding: 48px 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.pagina-header h1 {
+    font-size: 2.4rem;
+    margin-bottom: 8px;
+}
+
+.pagina-header .subtitulo {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.pagina-header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.pagina-footer {
+    background-color: #2d3748;
+    color: #a0aec0;
+    text-align: center;
+    padding: 24px 0;
+    margin-top: 48px;
+}
+
+
+/* ----------------------------------------------------------------
+   SEÇÕES E BLOCOS DE EXEMPLO
+   ---------------------------------------------------------------- */
+.secao {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.secao h2 {
+    color: #4a5568;
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #667eea;
+}
+
+.secao-descricao {
+    color: #718096;
+    margin-bottom: 24px;
+    font-size: 1rem;
+}
+
+.exemplo-bloco {
+    background-color: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 16px;
+}
+
+.exemplo-bloco h3 {
+    font-size: 1rem;
+    color: #4a5568;
+    margin-bottom: 12px;
+}
+
+.rotulo-exemplo {
+    font-size: 0.85rem;
+    color: #718096;
+    margin-bottom: 8px;
+}
+
+.grid-exemplos {
+    display: flex;           /* Grid não permitido — usamos flex wrap aqui */
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.grid-exemplos .exemplo-bloco {
+    flex: 1 1 280px; /* Cada bloco ocupa no mínimo 280px e cresce igualmente */
+}
+
+
+/* ----------------------------------------------------------------
+   CAIXAS COLORIDAS (usadas em todos os exemplos)
+   ---------------------------------------------------------------- */
+.caixa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    min-height: 60px;
+    padding: 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.caixa-1 { background-color: #667eea; }
+.caixa-2 { background-color: #48bb78; }
+.caixa-3 { background-color: #ed8936; }
+.caixa-4 { background-color: #e53e3e; }
+
+/* Alturas variadas para demonstrar align-items */
+.caixa-baixa  { min-height: 50px; }
+.caixa-media  { min-height: 80px; }
+.caixa-alta   { min-height: 120px; }
+
+
+/* ================================================================
+   SEÇÃO 1 — display: flex
+   ================================================================ */
+
+/* Sem flex: cada div ocupa 100% da largura (comportamento de bloco) */
+.exemplo-sem-flex .caixa {
+    margin-bottom: 8px;
+}
+
+/*
+   CONTAINER FLEX
+   display: flex transforma este elemento em um container flex.
+   Os filhos diretos (as .caixa) passam automaticamente a ser ITENS FLEX.
+*/
+.exemplo-flex {
+    display: flex; /* Transforma este elemento em um container flex */
+    gap: 12px;
+    padding: 16px;
+    background-color: #edf2f7;
+    border-radius: 8px;
+    border: 2px dashed #667eea;
+}
+
+
+/* ================================================================
+   SEÇÃO 2 — flex-direction
+   ================================================================ */
+
+/* Base comum para todos os exemplos de direção */
+.direcao {
+    display: flex;
+    gap: 10px;
+    padding: 16px;
+    background-color: #edf2f7;
+    border-radius: 8px;
+    border: 2px dashed #a0aec0;
+    min-height: 120px;
+}
+
+/*
+   flex-direction: row
+   Define o eixo principal na horizontal (esquerda → direita).
+   Este é o valor padrão.
+*/
+.direcao-row {
+    flex-direction: row; /* Define o eixo principal na horizontal */
+}
+
+/*
+   flex-direction: row-reverse
+   Eixo principal horizontal, mas na direção inversa.
+*/
+.direcao-row-reverse {
+    flex-direction: row-reverse; /* Horizontal invertida */
+}
+
+/*
+   flex-direction: column
+   Eixo principal na vertical (topo → base).
+   O eixo cruzado passa a ser horizontal.
+*/
+.direcao-column {
+    flex-direction: column; /* Define o eixo principal na vertical */
+}
+
+/*
+   flex-direction: column-reverse
+   Eixo principal vertical, direção invertida (base → topo).
+*/
+.direcao-column-reverse {
+    flex-direction: column-reverse; /* Vertical invertida */
+}
+
+
+/* ================================================================
+   SEÇÃO 3 — justify-content
+   Alinha itens no EIXO PRINCIPAL (horizontal, quando row)
+   ================================================================ */
+
+.justify {
+    display: flex;
+    gap: 10px;
+    padding: 16px;
+    background-color: #edf2f7;
+    border-radius: 8px;
+    border: 2px dashed #a0aec0;
+    width: 100%; /* Largura grande para visualizar o alinhamento */
+}
+
+/* justify-content: flex-start — itens no início do eixo principal */
+.justify-start {
+    justify-content: flex-start; /* Alinha no início do eixo principal */
+}
+
+/* justify-content: center — itens centralizados no eixo principal */
+.justify-center {
+    justify-content: center; /* Centraliza no eixo principal */
+}
+
+/* justify-content: flex-end — itens no final do eixo principal */
+.justify-end {
+    justify-content: flex-end; /* Alinha no final do eixo principal */
+}
+
+/* justify-content: space-between — espaço igual ENTRE os itens */
+.justify-between {
+    justify-content: space-between; /* Espaço entre os itens, sem nas pontas */
+}
+
+/* justify-content: space-around — espaço igual AO REDOR de cada item */
+.justify-around {
+    justify-content: space-around; /* Espaço ao redor de cada item */
+}
+
+/* justify-content: space-evenly — espaço igual ENTRE todos (incluindo pontas) */
+.justify-evenly {
+    justify-content: space-evenly; /* Espaço uniforme em todos os pontos */
+}
+
+
+/* ================================================================
+   SEÇÃO 4 — align-items
+   Alinha itens no EIXO CRUZADO (vertical, quando row)
+   ================================================================ */
+
+.align {
+    display: flex;
+    gap: 10px;
+    padding: 16px;
+    background-color: #edf2f7;
+    border-radius: 8px;
+    border: 2px dashed #a0aec0;
+    min-height: 160px; /* Altura fixa para perceber o alinhamento vertical */
+}
+
+/* align-items: stretch — estica itens para preencher o eixo cruzado (padrão) */
+.align-stretch {
+    align-items: stretch; /* Estica itens no eixo cruzado */
+}
+
+.align-stretch .caixa {
+    min-height: auto; /* Remove altura mínima para o stretch funcionar */
+}
+
+/* align-items: flex-start — itens alinhados no topo do eixo cruzado */
+.align-start {
+    align-items: flex-start; /* Alinha no início do eixo cruzado */
+}
+
+/* align-items: center — itens centralizados no eixo cruzado */
+.align-center {
+    align-items: center; /* Centraliza no eixo cruzado */
+}
+
+/* align-items: flex-end — itens alinhados na base do eixo cruzado */
+.align-end {
+    align-items: flex-end; /* Alinha no final do eixo cruzado */
+}
+
+
+/* ================================================================
+   SEÇÃO 5 — flex-wrap e gap
+   ================================================================ */
+
+/*
+   GALERIA COM FLEX-WRAP E GAP
+   flex-wrap: wrap permite que os itens quebrem para a próxima linha.
+   gap: 16px controla o espaço uniforme entre todos os itens.
+   Juntos, criam layouts responsivos sem media queries complexas.
+*/
+.galeria-wrap {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar linha quando não couber */
+    gap: 16px;       /* Espaço entre os itens (horizontal e vertical) */
+    padding: 16px;
+    background-color: #edf2f7;
+    border-radius: 8px;
+    border: 2px dashed #a0aec0;
+}
+
+.card-galeria {
+    flex: 1 1 180px; /* Cresce, encolhe, base mínima de 180px */
+    padding: 24px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-1 { background-color: #667eea; }
+.card-2 { background-color: #48bb78; }
+.card-3 { background-color: #ed8936; }
+.card-4 { background-color: #e53e3e; }
+.card-5 { background-color: #9f7aea; }
+.card-6 { background-color: #38b2ac; }
+.card-7 { background-color: #d69e2e; }
+.card-8 { background-color: #fc8181; }
+
+
+/* ================================================================
+   SEÇÃO 6 — flex-grow, flex-shrink, flex-basis e flex
+   Propriedades dos ITENS FLEX (não do container)
+   ================================================================ */
+
+.flex-props-container {
+    display: flex;
+    gap: 12px;
+    padding: 16px;
+    background-color: #edf2f7;
+    border-radius: 8px;
+    border: 2px dashed #a0aec0;
+}
+
+.flex-item {
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.flex-item span {
+    font-size: 0.8rem;
+    opacity: 0.85;
+}
+
+/*
+   flex: 0 1 auto
+   flex-grow: 0   → não cresce além do tamanho base
+   flex-shrink: 1 → pode encolher se necessário
+   flex-basis: auto → tamanho base definido pelo conteúdo
+*/
+.flex-pequeno {
+    flex: 0 1 auto; /* Não cresce — permanece pequeno */
+    background-color: #667eea;
+}
+
+/*
+   flex: 1 1 150px
+   flex-grow: 1   → cresce para ocupar espaço disponível
+   flex-shrink: 1 → pode encolher
+   flex-basis: 150px → tamanho base de 150px
+*/
+.flex-medio {
+    flex: 1 1 150px; /* Cresce moderadamente a partir de 150px */
+    background-color: #48bb78;
+}
+
+/*
+   flex: 2 1 200px
+   flex-grow: 2   → cresce o DOBRO do item com grow: 1
+   flex-shrink: 1 → pode encolher
+   flex-basis: 200px → tamanho base de 200px
+
+   ATALHO: flex = flex-grow flex-shrink flex-basis
+*/
+.flex-grande {
+    flex: 2 1 200px; /* Cresce mais que os outros (grow: 2) */
+    background-color: #ed8936;
+}
+
+/* Demonstrações individuais */
+.flex-detalhes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.detalhe-item {
+    flex: 1 1 280px;
+}
+
+.detalhe-item h4 {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    color: #4a5568;
+}
+
+.demo-grow,
+.demo-basis {
+    display: flex;
+    gap: 8px;
+    padding: 12px;
+    background-color: #edf2f7;
+    border-radius: 8px;
+}
+
+/* flex-grow: 1 — este item absorve todo o espaço extra */
+.demo-grow-1 {
+    flex-grow: 1; /* Cresce para preencher espaço disponível */
+}
+
+/* flex-grow: 0 — não cresce além do tamanho base */
+.demo-grow-0 {
+    flex-grow: 0; /* Mantém tamanho original */
+}
+
+/* flex-basis define o tamanho inicial antes de grow/shrink */
+.demo-basis-200 {
+    flex: 0 0 200px; /* Base fixa de 200px, não cresce nem encolhe */
+}
+
+.demo-basis-100 {
+    flex: 0 0 100px; /* Base fixa de 100px */
+}
+
+.demo-basis-auto {
+    flex: 1 1 auto; /* Cresce e encolhe conforme necessário */
+}
+
+
+/* ================================================================
+   SEÇÃO 7 — order e align-self
+   Propriedades dos ITENS FLEX (não do container!)
+   ================================================================ */
+
+.order-container {
+    display: flex;
+    gap: 10px;
+    padding: 16px;
+    background-color: #edf2f7;
+    border-radius: 8px;
+    border: 2px dashed #a0aec0;
+}
+
+/*
+   order: -1
+   Valor padrão é 0. Valores menores aparecem ANTES.
+   Esta propriedade é do ITEM, não do container.
+*/
+.order-primeiro {
+    order: -1; /* Aparece antes dos itens com order: 0 */
+}
+
+.order-normal {
+    order: 0; /* Ordem padrão (mesma do HTML) */
+}
+
+/*
+   order: 2
+   Valores maiores aparecem DEPOIS.
+*/
+.order-ultimo {
+    order: 2; /* Aparece depois dos itens com order: 0 e 1 */
+}
+
+.self-container {
+    display: flex;
+    align-items: flex-start; /* Padrão do container: topo */
+    gap: 10px;
+    padding: 16px;
+    background-color: #edf2f7;
+    border-radius: 8px;
+    border: 2px dashed #a0aec0;
+    min-height: 160px;
+}
+
+/*
+   align-self: flex-end
+   Sobrescreve align-items APENAS neste item.
+   Alinha este item individualmente no final do eixo cruzado.
+*/
+.self-end {
+    align-self: flex-end; /* Alinha só este item na base */
+}
+
+/*
+   align-self: center
+   Centraliza apenas este item no eixo cruzado.
+*/
+.self-center {
+    align-self: center; /* Alinha só este item ao centro vertical */
+}
+
+
+/* ================================================================
+   SEÇÃO 8 — Layout real usando Flexbox
+   Aplicação prática em uma mini-página
+   ================================================================ */
+
+.layout-demo {
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+/* --- Navbar: logo à esquerda, menu à direita --- */
+.demo-navbar {
+    display: flex;                    /* Container flex horizontal */
+    justify-content: space-between; /* Logo no início, menu no final */
+    align-items: center;            /* Centraliza verticalmente */
+    padding: 16px 24px;
+    background-color: #667eea;
+    color: #fff;
+}
+
+.demo-logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.demo-menu {
+    display: flex;  /* Menu também é flex para alinhar links */
+    gap: 20px;      /* Espaço entre os links */
+}
+
+.demo-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.demo-menu a:hover {
+    opacity: 0.8;
+}
+
+/* --- Hero: texto e imagem lado a lado --- */
+.demo-hero {
+    display: flex;
+    flex-wrap: wrap; /* Quebra em coluna no mobile */
+    gap: 24px;
+    padding: 32px 24px;
+    background-color: #f7fafc;
+}
+
+.demo-hero-texto {
+    flex: 1 1 280px; /* Ocupa espaço disponível, mínimo 280px */
+}
+
+.demo-hero-texto h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: #2d3748;
+}
+
+.demo-hero-texto p {
+    color: #718096;
+}
+
+.demo-hero-imagem {
+    flex: 1 1 200px;
+    min-height: 150px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* --- Cards responsivos --- */
+.demo-cards-secao {
+    padding: 24px;
+}
+
+.demo-cards-secao h3 {
+    margin-bottom: 16px;
+    color: #2d3748;
+}
+
+.demo-cards {
+    display: flex;
+    flex-wrap: wrap; /* Cards quebram linha em telas menores */
+    gap: 16px;
+}
+
+.demo-card {
+    flex: 1 1 200px; /* Responsivo: cresce, encolhe, base 200px */
+    padding: 24px;
+    background-color: #667eea;
+    color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.demo-card:nth-child(2) {
+    background-color: #48bb78;
+}
+
+.demo-card:nth-child(3) {
+    background-color: #ed8936;
+}
+
+/* --- Footer --- */
+.demo-footer {
+    display: flex;
+    justify-content: space-between; /* Texto à esquerda, links à direita */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 16px 24px;
+    background-color: #2d3748;
+    color: #a0aec0;
+    font-size: 0.9rem;
+}
+
+.demo-footer-links {
+    display: flex;
+    gap: 16px;
+}
+
+.demo-footer-links a {
+    color: #a0aec0;
+    text-decoration: none;
+}
+
+.demo-footer-links a:hover {
+    color: #fff;
+}
+
+
+/* ================================================================
+   RESPONSIVIDADE
+   Ajustes para telas menores (mobile)
+   ================================================================ */
+@media (max-width: 600px) {
+    .pagina-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .secao {
+        padding: 20px;
+    }
+
+    /* Navbar vira coluna no mobile */
+    .demo-navbar {
+        flex-direction: column; /* Eixo principal vira vertical */
+        gap: 12px;
+        text-align: center;
+    }
+
+    .demo-menu {
+        flex-direction: column; /* Links empilhados */
+        gap: 8px;
+    }
+
+    .demo-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}

@@ -1,0 +1,52 @@
+body{
+    height: 100vh;
+    background-color: rgb(172, 255, 227);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.total{
+    display: flex;
+    width: 50%;
+    margin:auto;
+    flex-direction: column;
+    border: 3px solid black;
+    border-radius: 20px;
+    align-items: center;
+}
+.enunciado{
+    display: flex;
+    width: 50%;
+    margin:auto;
+    flex-direction: column;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.tabela{
+    display: flex;
+    width: 50%;
+    margin:auto;
+    flex-direction: column;
+    border: 3px solid black;
+    border-radius: 10px;
+    
+}
+
+table{
+    border-collapse: collapse;
+}
+
+td, th{
+    text-align: center;
+    border: 1px solid black;
+}
+
+.calculos{
+    display: flex;
+    width: 50%;
+    margin:auto;
+    flex-direction:column;
+    border: 3px solid black;
+    border-radius: 10px;
+}

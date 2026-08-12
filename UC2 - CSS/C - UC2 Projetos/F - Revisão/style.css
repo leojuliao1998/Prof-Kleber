@@ -1,0 +1,248 @@
+
+/*^ Asterisco ou * = TODAS AS TAGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    /*^ box-sizing define o tamanho total que é considerado pelo site */
+    /** Por padrão (mesmo sem escrever) ele já vem como "content-box* dessa forma quando colocamos "padding" por exemplo ele cresce além do que definimos */
+    /*^ Usando "border-box" o padding faz parte do tamanho planejado */
+    box-sizing: border-box;
+}
+
+/*^ Configurações Gerais*/
+body {
+    /** O <body> é o pai de todas as tags visuais */
+    /*^ Ao colocar o font-family aqui seus filhos vão herdar */
+    /*^ A não ser que UM UMA TAG ESPECÍFICA eu coloque uma fontee para ela */
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333;
+    background-color: white;
+}
+
+a {
+    /*^ Removendo sublinhado padrão de <a> */
+    text-decoration: none;
+}
+
+/*^ CABEÇALHO ========================================================================== */
+.cabecalho {
+    height: 80px;
+    /** 0px - vertical (top e bottom) | 80 px - horizontal (left e right) */
+    padding: 0px 80px;
+    background-color: white;
+    /*^ borda só embaixo*/
+    border-bottom: 1px solid #dddddd;
+
+    display: flex;
+    /*^ As propriedades abaixo são exclusivas do "flex" */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    color: #5C67E6;
+    font-size: 26px;
+    font-weight: bold;    
+}
+
+.menu{
+    /*^ Adicionando aqui em .menu vai organizar os filhos que são os <a> dentro dele */
+    display: flex;
+    /** gap = Espaço entre os filhos de um flex (entre os <a>) */
+    /** gap é bem parecido com um "margin" */
+    gap:30px
+}
+
+/*^ Editando os <a> dentro do .menu */
+.menu a{
+    color: #444444;
+    font-weight: bold;
+}
+
+/*^ hover = ao passar o mouse sobre o <a> será feito a animação */
+.menu a:hover{
+    color: #5C67E6;
+}
+
+/*^ SEÇÃO INICIAL ======================================================================= */
+
+.inicio{
+    /*^ Altura mínima (Não pode ser menor que 500px) */
+    min-height: 500px;
+    padding: 80px;
+    background-color: #F3F4FF;
+
+    display:flex;
+    /*^ Alinhamento verticalmente */
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.inicio-texto{
+    width: 50%;
+}
+
+.inicio-texto h1{
+    color: #25284B;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.inicio-texto p{
+    color: #666666;
+    font-size: 18px;
+    /*^ Altura da linha (O quanto as linhas ficam separadas)*/
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.botao{
+    /*^ inline-block é o melhjor do "inline" e o melhor do "block" */
+    /** inline = Pode ficar itens ao lado (Diferente do block)*/
+    /** block = Pode ter seu tamanho editado (Diferente do inline)*/
+    display: inline-block;
+    padding: 14px 25px;
+    background-color: #5C67E6;
+    color: white;
+    border-radius: 5px;
+}
+
+.botao:hover{
+    background-color: #454FCA;
+}
+
+.inicio-imagem{
+    width: 50%;
+
+    display:flex;
+    justify-content: center;
+}
+
+.codigo{
+    width: 300px;
+    padding: 35px;
+    background-color: #25284B;
+    color: white;
+    border-radius: 10px;
+    font-family: monospace;
+    font-size: 18px;
+    /*^ Altura de linha 2 = 2 vezes o normal*/
+    line-height: 2;
+}
+.espaco{
+    margin-left: 30px;
+    color: AEB5FF;
+}
+
+/*^ CURSOS ================================================================ */
+
+.cursos{
+    padding: 80px;
+    text-align: center;
+}
+
+.cursos h2{
+    color: #25284B;
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.descricao-secao{
+    color: #777777;
+    margin-bottom: 40px;
+}
+
+/*^ Pai dos .card de cada curso */
+.lista-cursos{
+    display: flex;
+    justify-content:center;
+    gap: 25px;
+}
+
+.card{
+    width: 280px;
+    padding: 30px;
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.card:hover{
+    background-color: 5C67E6;
+}
+
+.card h3{
+    color: #5C67E6;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.card p{
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.card a{
+    color: #5C67E6;
+    font-weight: bold;
+}
+
+/*^ SOBRE ======================================================================================== */
+
+.sobre{
+    padding: 80px;
+    background-color: F3F4FF;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.sobre-texto{
+    width: 60%;
+}
+
+.sobre-texto h2{
+    color: #25284B;
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.sobre-texto p{
+    color: #666666;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.sobre-destaque{
+    width: 300px;
+    padding: 30px;
+    background-color: #5C67E6;
+    color: #ffffff;
+    border-radius: 10px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.sobre-destaque strong{
+    font-size: 25px;
+}
+
+/*^ Rodapé =============================================================================== */
+
+.rodape{
+    padding: 25px;
+    background-color: #25284B;
+    color: white;
+    text-align: center;
+}

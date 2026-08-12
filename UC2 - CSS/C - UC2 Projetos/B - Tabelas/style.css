@@ -1,0 +1,46 @@
+/*Comentário no CSS*/
+
+body{
+    background-color: #BFDDF0;
+    font-family: cursive;
+    color: #D92243;
+}
+
+h1{
+    text-transform: uppercase; /*Letra maiúscula*/
+    letter-spacing: 3px; /*Espaço entre letras*/
+    text-align: center; /*Centralização do texto*/
+    text-shadow: 3px 8px 13px rgb(76, 0, 0); /*Espaço à Direita (positivo-direita; negativo-esquerda), Espaço à Baixo(positivo-baixo; negativo-cima), Esfumaçado e Cor*/
+    font-weight: normal; /*Espessura da letra (Como o "H" já vem em negrito, colocando "normal" ele fica fino)*/
+}
+
+table{
+    text-align: center;
+    border: 2px solid black;
+    border-collapse: collapse;
+    font-size: 25px; 
+    color: white       
+}
+
+table:hover{
+    text-align: center;
+    border: 5px solid black;
+    font-size: 30px; 
+    border-collapse: collapse;
+    color: white
+}
+
+th, td{
+    border: 5px solid black;
+    padding: 7px;
+    transition: all 0.5s;
+}
+
+th{
+    text-transform: uppercase;
+    background-color: #890000;
+}
+
+td{
+    background-color: #1800b3;
+}

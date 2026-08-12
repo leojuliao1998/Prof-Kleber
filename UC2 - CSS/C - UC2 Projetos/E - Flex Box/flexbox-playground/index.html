@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Playground — Aprenda CSS Flexbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ============================================================
+         CABEÇALHO DA PÁGINA
+         Apresenta o projeto e explica o conceito básico de Flexbox
+         ============================================================ -->
+    <header class="pagina-header">
+        <div class="container">
+            <h1>Flexbox Playground</h1>
+            <p class="subtitulo">Material visual para aprender as principais propriedades do CSS Flexbox</p>
+        </div>
+    </header>
+
+    <!-- ============================================================
+         CONTEÚDO PRINCIPAL
+         Cada <section> demonstra uma propriedade ou grupo de propriedades
+         ============================================================ -->
+    <main class="container">
+
+        <!-- --------------------------------------------------------
+             SEÇÃO 1 — display: flex
+             O container flex é o elemento pai que recebe display: flex.
+             Os filhos diretos desse elemento passam a ser "itens flex".
+             -------------------------------------------------------- -->
+        <section id="display-flex" class="secao">
+            <h2>Seção 1 — O que é <code>display: flex</code></h2>
+            <p class="secao-descricao">
+                Sem Flexbox, blocos (<code>div</code>) ficam empilhados verticalmente.
+                Com <code>display: flex</code>, os filhos diretos ficam lado a lado no eixo principal.
+            </p>
+
+            <article class="exemplo-bloco">
+                <h3>Comparação: blocos normais vs. container flex</h3>
+
+                <!-- Exemplo SEM flex — blocos empilhados -->
+                <p class="rotulo-exemplo">Sem Flexbox (comportamento padrão de bloco):</p>
+                <div class="exemplo-sem-flex">
+                    <div class="caixa caixa-1">1</div>
+                    <div class="caixa caixa-2">2</div>
+                    <div class="caixa caixa-3">3</div>
+                </div>
+
+                <!-- Exemplo COM flex — filhos lado a lado -->
+                <p class="rotulo-exemplo">Com Flexbox (<code>display: flex</code>):</p>
+                <!-- A classe .exemplo-flex transforma este div em CONTAINER FLEX -->
+                <div class="exemplo-flex">
+                    <!-- Estes três divs são ITENS FLEX (filhos diretos do container) -->
+                    <div class="caixa caixa-1">1</div>
+                    <div class="caixa caixa-2">2</div>
+                    <div class="caixa caixa-3">3</div>
+                </div>
+            </article>
+        </section>
+
+        <!-- --------------------------------------------------------
+             SEÇÃO 2 — flex-direction
+             Define a direção do EIXO PRINCIPAL (horizontal ou vertical).
+             O eixo cruzado é perpendicular ao eixo principal.
+             -------------------------------------------------------- -->
+        <section id="flex-direction" class="secao">
+            <h2>Seção 2 — <code>flex-direction</code></h2>
+            <p class="secao-descricao">
+                <code>flex-direction</code> muda o eixo principal. Isso altera a direção
+                em que os itens flex são organizados.
+            </p>
+
+            <div class="grid-exemplos">
+
+                <article class="exemplo-bloco">
+                    <h3><code>flex-direction: row</code></h3>
+                    <p class="rotulo-exemplo">Eixo principal na horizontal (esquerda → direita)</p>
+                    <div class="direcao direcao-row">
+                        <div class="caixa caixa-1">1</div>
+                        <div class="caixa caixa-2">2</div>
+                        <div class="caixa caixa-3">3</div>
+                        <div class="caixa caixa-4">4</div>
+                    </div>
+                </article>
+
+                <article class="exemplo-bloco">
+                    <h3><code>flex-direction: row-reverse</code></h3>
+                    <p class="rotulo-exemplo">Horizontal invertida (direita → esquerda)</p>
+                    <div class="direcao direcao-row-reverse">
+                        <div class="caixa caixa-1">1</div>
+                        <div class="caixa caixa-2">2</div>
+                        <div class="caixa caixa-3">3</div>
+                        <div class="caixa caixa-4">4</div>
+                    </div>
+                </article>
+
+                <article class="exemplo-bloco">
+                    <h3><code>flex-direction: column</code></h3>
+                    <p class="rotulo-exemplo">Eixo principal na vertical (topo → base)</p>
+                    <div class="direcao direcao-column">
+                        <div class="caixa caixa-1">1</div>
+                        <div class="caixa caixa-2">2</div>
+                        <div class="caixa caixa-3">3</div>
+                        <div class="caixa caixa-4">4</div>
+                    </div>
+                </article>
+
+                <article class="exemplo-bloco">
+                    <h3><code>flex-direction: column-reverse</code></h3>
+                    <p class="rotulo-exemplo">Vertical invertida (base → topo)</p>
+                    <div class="direcao direcao-column-reverse">
+                        <div class="caixa caixa-1">1</div>
+                        <div class="caixa caixa-2">2</div>
+                        <div class="caixa caixa-3">3</div>
+                        <div class="caixa caixa-4">4</div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- --------------------------------------------------------
+             SEÇÃO 3 — justify-content
+             Propriedade do CONTAINER — alinha itens no EIXO PRINCIPAL
+             -------------------------------------------------------- -->
+        <section id="justify-content" class="secao">
+            <h2>Seção 3 — <code>justify-content</code></h2>
+            <p class="secao-descricao">
+                <code>justify-content</code> alinha os itens flex ao longo do
+                <strong>eixo principal</strong>. Use containers largos para visualizar melhor.
+            </p>
+
+            <article class="exemplo-bloco">
+                <h3><code>justify-content: flex-start</code></h3>
+                <div class="justify justify-start">
+                    <div class="caixa caixa-1">1</div>
+                    <div class="caixa caixa-2">2</div>
+                    <div class="caixa caixa-3">3</div>
+                </div>
+            </article>
+
+            <article class="exemplo-bloco">
+                <h3><code>justify-content: center</code></h3>
+                <div class="justify justify-center">
+                    <div class="caixa caixa-1">1</div>
+                    <div class="caixa caixa-2">2</div>
+                    <div class="caixa caixa-3">3</div>
+                </div>
+            </article>
+
+            <article class="exemplo-bloco">
+                <h3><code>justify-content: flex-end</code></h3>
+                <div class="justify justify-end">
+                    <div class="caixa caixa-1">1</div>
+                    <div class="caixa caixa-2">2</div>
+                    <div class="caixa caixa-3">3</div>
+                </div>
+            </article>
+
+            <article class="exemplo-bloco">
+                <h3><code>justify-content: space-between</code></h3>
+                <div class="justify justify-between">
+                    <div class="caixa caixa-1">1</div>
+                    <div class="caixa caixa-2">2</div>
+                    <div class="caixa caixa-3">3</div>
+                </div>
+            </article>
+
+            <article class="exemplo-bloco">
+                <h3><code>justify-content: space-around</code></h3>
+                <div class="justify justify-around">
+                    <div class="caixa caixa-1">1</div>
+                    <div class="caixa caixa-2">2</div>
+                    <div class="caixa caixa-3">3</div>
+                </div>
+            </article>
+
+            <article class="exemplo-bloco">
+                <h3><code>justify-content: space-evenly</code></h3>
+                <div class="justify justify-evenly">
+                    <div class="caixa caixa-1">1</div>
+                    <div class="caixa caixa-2">2</div>
+                    <div class="caixa caixa-3">3</div>
+                </div>
+            </article>
+        </section>
+
+        <!-- --------------------------------------------------------
+             SEÇÃO 4 — align-items
+             Propriedade do CONTAINER — alinha itens no EIXO CRUZADO
+             -------------------------------------------------------- -->
+        <section id="align-items" class="secao">
+            <h2>Seção 4 — <code>align-items</code></h2>
+            <p class="secao-descricao">
+                <code>align-items</code> alinha os itens no <strong>eixo cruzado</strong>
+                (perpendicular ao eixo principal). Observe caixas com alturas diferentes.
+            </p>
+
+            <div class="grid-exemplos">
+
+                <article class="exemplo-bloco">
+                    <h3><code>align-items: stretch</code></h3>
+                    <div class="align align-stretch">
+                        <div class="caixa caixa-1 caixa-baixa">1</div>
+                        <div class="caixa caixa-2 caixa-media">2</div>
+                        <div class="caixa caixa-3 caixa-alta">3</div>
+                    </div>
+                </article>
+
+                <article class="exemplo-bloco">
+                    <h3><code>align-items: flex-start</code></h3>
+                    <div class="align align-start">
+                        <div class="caixa caixa-1 caixa-baixa">1</div>
+                        <div class="caixa caixa-2 caixa-media">2</div>
+                        <div class="caixa caixa-3 caixa-alta">3</div>
+                    </div>
+                </article>
+
+                <article class="exemplo-bloco">
+                    <h3><code>align-items: center</code></h3>
+                    <div class="align align-center">
+                        <div class="caixa caixa-1 caixa-baixa">1</div>
+                        <div class="caixa caixa-2 caixa-media">2</div>
+                        <div class="caixa caixa-3 caixa-alta">3</div>
+                    </div>
+                </article>
+
+                <article class="exemplo-bloco">
+                    <h3><code>align-items: flex-end</code></h3>
+                    <div class="align align-end">
+                        <div class="caixa caixa-1 caixa-baixa">1</div>
+                        <div class="caixa caixa-2 caixa-media">2</div>
+                        <div class="caixa caixa-3 caixa-alta">3</div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- --------------------------------------------------------
+             SEÇÃO 5 — flex-wrap e gap
+             flex-wrap permite quebra de linha; gap controla espaçamento
+             -------------------------------------------------------- -->
+        <section id="flex-wrap-gap" class="secao">
+            <h2>Seção 5 — <code>flex-wrap</code> e <code>gap</code></h2>
+            <p class="secao-descricao">
+                Com <code>flex-wrap: wrap</code>, os itens quebram para a linha de baixo
+                quando não cabem. O <code>gap</code> define o espaço entre eles — ideal para layouts responsivos.
+            </p>
+
+            <article class="exemplo-bloco">
+                <h3>Galeria de cards com quebra de linha</h3>
+                <div class="galeria-wrap">
+                    <div class="card-galeria card-1">Card 1</div>
+                    <div class="card-galeria card-2">Card 2</div>
+                    <div class="card-galeria card-3">Card 3</div>
+                    <div class="card-galeria card-4">Card 4</div>
+                    <div class="card-galeria card-5">Card 5</div>
+                    <div class="card-galeria card-6">Card 6</div>
+                    <div class="card-galeria card-7">Card 7</div>
+                    <div class="card-galeria card-8">Card 8</div>
+                </div>
+            </article>
+        </section>
+
+        <!-- --------------------------------------------------------
+             SEÇÃO 6 — flex-grow, flex-shrink, flex-basis e flex
+             Propriedades dos ITENS — controlam tamanho e crescimento
+             -------------------------------------------------------- -->
+        <section id="flex-propriedades" class="secao">
+            <h2>Seção 6 — <code>flex-grow</code>, <code>flex-shrink</code>, <code>flex-basis</code> e <code>flex</code></h2>
+            <p class="secao-descricao">
+                Estas propriedades são aplicadas nos <strong>itens flex</strong>, não no container.
+                O atalho <code>flex</code> combina grow, shrink e basis.
+            </p>
+
+            <article class="exemplo-bloco">
+                <h3>Três cards com comportamentos diferentes</h3>
+                <div class="flex-props-container">
+                    <!-- flex-grow: 0 — não cresce além do tamanho base -->
+                    <div class="flex-item flex-pequeno">
+                        <strong>Pequeno</strong>
+                        <span>flex: 0 1 auto</span>
+                    </div>
+                    <!-- flex-grow: 1 — cresce moderadamente -->
+                    <div class="flex-item flex-medio">
+                        <strong>Médio</strong>
+                        <span>flex: 1 1 150px</span>
+                    </div>
+                    <!-- flex-grow: 2 — cresce mais que os outros -->
+                    <div class="flex-item flex-grande">
+                        <strong>Grande</strong>
+                        <span>flex: 2 1 200px</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="exemplo-bloco">
+                <h3>Demonstração individual das propriedades</h3>
+                <div class="flex-detalhes">
+                    <div class="detalhe-item">
+                        <h4>flex-grow: 1</h4>
+                        <div class="demo-grow">
+                            <div class="caixa caixa-1 demo-grow-1">grow: 1</div>
+                            <div class="caixa caixa-2 demo-grow-0">grow: 0</div>
+                            <div class="caixa caixa-3 demo-grow-0">grow: 0</div>
+                        </div>
+                    </div>
+                    <div class="detalhe-item">
+                        <h4>flex-basis: 200px</h4>
+                        <div class="demo-basis">
+                            <div class="caixa caixa-1 demo-basis-200">200px</div>
+                            <div class="caixa caixa-2 demo-basis-100">100px</div>
+                            <div class="caixa caixa-3 demo-basis-auto">auto</div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- --------------------------------------------------------
+             SEÇÃO 7 — order e align-self
+             Propriedades dos ITENS — ordem visual e alinhamento individual
+             -------------------------------------------------------- -->
+        <section id="order-align-self" class="secao">
+            <h2>Seção 7 — <code>order</code> e <code>align-self</code></h2>
+            <p class="secao-descricao">
+                <code>order</code> e <code>align-self</code> são aplicados nos
+                <strong>itens flex</strong>, permitindo controlar ordem e alinhamento individual.
+            </p>
+
+            <article class="exemplo-bloco">
+                <h3><code>order</code> — mudando a ordem visual</h3>
+                <p class="rotulo-exemplo">No HTML a ordem é 1, 2, 3 — mas o CSS altera a exibição:</p>
+                <div class="order-container">
+                    <div class="caixa caixa-1 order-normal">1 (order: 0)</div>
+                    <div class="caixa caixa-2 order-primeiro">2 (order: -1)</div>
+                    <div class="caixa caixa-3 order-ultimo">3 (order: 2)</div>
+                </div>
+            </article>
+
+            <article class="exemplo-bloco">
+                <h3><code>align-self</code> — alinhamento individual no eixo cruzado</h3>
+                <div class="self-container">
+                    <div class="caixa caixa-1 caixa-media">Padrão</div>
+                    <div class="caixa caixa-2 caixa-alta self-end">align-self: flex-end</div>
+                    <div class="caixa caixa-3 caixa-baixa self-center">align-self: center</div>
+                    <div class="caixa caixa-4 caixa-media">Padrão</div>
+                </div>
+            </article>
+        </section>
+
+        <!-- --------------------------------------------------------
+             SEÇÃO 8 — Layout real usando Flexbox
+             Aplicação prática: navbar, hero, cards e footer
+             -------------------------------------------------------- -->
+        <section id="layout-real" class="secao">
+            <h2>Seção 8 — Layout real usando Flexbox</h2>
+            <p class="secao-descricao">
+                Veja como Flexbox organiza uma página completa: cabeçalho, conteúdo principal,
+                cards responsivos e rodapé.
+            </p>
+
+            <article class="layout-demo">
+                <!-- Navbar: logo à esquerda, menu à direita -->
+                <header class="demo-navbar">
+                    <div class="demo-logo">🎨 MeuSite</div>
+                    <nav class="demo-menu">
+                        <a href="#">Início</a>
+                        <a href="#">Sobre</a>
+                        <a href="#">Contato</a>
+                    </nav>
+                </header>
+
+                <!-- Hero: texto de um lado, ilustração do outro -->
+                <section class="demo-hero">
+                    <div class="demo-hero-texto">
+                        <h3>Bem-vindo ao Flexbox</h3>
+                        <p>Com Flexbox você cria layouts modernos de forma simples, sem frameworks.</p>
+                    </div>
+                    <div class="demo-hero-imagem">
+                        <span>Área ilustrativa</span>
+                    </div>
+                </section>
+
+                <!-- Cards responsivos com wrap e gap -->
+                <section class="demo-cards-secao">
+                    <h3>Nossos serviços</h3>
+                    <div class="demo-cards">
+                        <div class="demo-card">Design</div>
+                        <div class="demo-card">Desenvolvimento</div>
+                        <div class="demo-card">Marketing</div>
+                    </div>
+                </section>
+
+                <!-- Footer com itens alinhados -->
+                <footer class="demo-footer">
+                    <p>&copy; 2026 Flexbox Playground</p>
+                    <div class="demo-footer-links">
+                        <a href="#">Privacidade</a>
+                        <a href="#">Termos</a>
+                    </div>
+                </footer>
+            </article>
+        </section>
+
+    </main>
+
+    <!-- Rodapé da página principal -->
+    <footer class="pagina-footer">
+        <div class="container">
+            <p>Material didático Kleber Lucas — Senac Barretos — Flexbox Playground | HTML &amp; CSS puro</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tags Estruturais do HTML</title>
+</head>
+<body>
+    <!--^ Header - Cabeçalho -->
+    <!--^ Geralmente o topo do site (Faixa superior) -->
+    <!--* É como se fosse um <div> (Um quadro separador) -->
+        <!--* Mas o "header" tem mais "semântica" / maior significado -->
+    <header>
+        <img src="https://substackcdn.com/image/fetch/$s_!G1lk!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8ed3d547-94ff-48e1-9f20-8c14a7030a02_2000x2000.jpeg" alt="logo da empresa" class=" logo">
+        <!--^ nav - navigator-> Menu do site -->
+        <nav>
+            <ul class=" menu">
+                <!--* "id=" é apenas para 1 tag só -->
+                <!--* já o "class="" pode ser utilizado em várias tags -->
+                <li><a href="index.html" id="atual">Home</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="banner">
+        <img src="iphone2.png" alt="cara segurando um iphone 17 pro max" class="banner">
+    </div>
+
+    <!--^ É como se fosse um <div> igual o <header> -->
+    <!--^ Representa o conteúdo principal da página -->
+    <main>
+        <div class="servicos">
+            <div class="card">
+                <a href="produtos.html"><img src="https://cdn-icons-gif.flaticon.com/19015/19015988.gif" alt="" class="icone-servico"></a>                
+                <h1>Loja Virtual</h1>
+                <p>Oferecemos a loja para nossos produtos.</p>
+            </div>
+            <div class="card">
+                <a href="assist-tecnica.html"><img src="https://cdn-icons-gif.flaticon.com/18990/18990667.gif" alt="" class="icone-servico"></a>
+                <h1>Assistencia Técnica</h1>
+                <p>Nossa assistencia técnica é a top 1 da cidade de acordo com a revista Forbes, entregando serviço de qualidade a 10 anos.</p>
+            </div>
+            <div class="card">
+                <a href="consultoria.html"><img src="https://cdn-icons-gif.flaticon.com/19012/19012936.gif" alt="" class="icone-servico"></a>
+                <h1>Consultoria</h1>
+                <p>Nossos analistas analisam as análises das suas empresas e dão conselhos.</p>
+            </div>
+
+        <!--! 11/06/2026 -->
+        </div>
+        <div class="sobre-empresa">
+
+            <div class="texto-sobre">
+                <h2>Sobre a empresa</h2>
+                
+                <p>A AppleTech é uma empresa sobre assistencia técnica e consultoria para pequenas, médias e grandes empresas para ecossistema Apple.</p>
+                
+                <p>Nosso objetivo é ajudar empresas no melhoramento de suas tecnologias, criando sites, sistemas, lojas virtuais e oferecendo o suporte necessário para o pleno funcionamento.</p>
+               
+                <p>Trabalhamos com criatividade, responsabilidade, e foco no cliente, buscando sempre entregar suluções simples, eficientes e modernas para sua empresa.</p>
+
+            </div>
+
+            <div class="imagem-sobre">
+                <img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png" alt="imagem sobre o código">
+            </div>
+
+        </div>
+
+        <div class="missao-valores">
+
+            <div class="caixa-info">
+                <h2>Missão</h2>
+                <p>Levar tecnologia acessível e de qualidade para empresas que desejam crescer.</p>
+            </div>
+
+            <div class=caixa-info>
+                <h2>Visão</h2>
+                <p>Ser referência em soluções digitais e suporte técnico na nossa região.</p>
+            </div>
+
+            <div class="caixa-info">
+                <h2>Valores</h2>
+                <p>Compromisso, criatividade, honestidade, inovação e respeito.</p>
+
+            </div>
+
+        </div>
+
+        <div>
+
+            <div class="contato">
+                <h2>Entre em contato</h2>
+                <p>Quer conhecer melhor nossos serviços?</p>
+                <a href="mailto:contact@appletech.com" class="botao-contato">Enviar E-mail</a>
+            </div>
+
+        </div>
+        
+        <!--! rodapé -->
+        <footer>
+            
+            <div class="footer-conteudo">
+                
+                <div>
+                    <h3>AppleTech</h3>
+                    <p>Soluções digitais para empresas modernas.</p>
+                </div>
+
+                <div class="footer-coluna">
+                    <h3>Links</h3>
+                    <!--! Lista não ordenada -->
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-coluna">
+                    <h3>Contato</h3>
+                    <p>E-mail: contact@appletech.com</p>
+                    <p>Telefone: (17)99999-9999</p>
+                </div>
+
+                <div class="footer-final">
+                    <p>&copy; 2026 AppleTech - Todos os direitos reservados.</p>
+                </div>
+
+            </div>
+
+        </footer>        
+
+    </main>
+</body>
+</html>

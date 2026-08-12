@@ -1,0 +1,10 @@
+Criar sobre as 5 linguagens de programação mais usados em 2026
+
+Criar uma tabela sobre elas com:
+
+- Nome da linguagem
+- Logotipo (imagem)
+- Ano da criação
+- Criador
+
+Usar CSS Externo - linguagem.css

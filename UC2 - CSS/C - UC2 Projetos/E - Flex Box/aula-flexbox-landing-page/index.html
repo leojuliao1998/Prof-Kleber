@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Academy — Aprenda HTML, CSS e Flexbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ============================================================
+         NAVBAR
+         Logo à esquerda, links e botão de ação
+         ============================================================ -->
+    <header class="navbar">
+        <a href="#" class="logo">⚡ Flex Academy</a>
+
+        <nav class="nav-menu">
+            <a href="#inicio">Início</a>
+            <a href="#recursos">Recursos</a>
+            <a href="#cursos">Cursos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <a href="#cursos" class="btn btn-primary btn-nav">Começar</a>
+    </header>
+
+    <main>
+
+        <!-- ============================================================
+             HERO SECTION
+             Texto à esquerda + caixa visual à direita
+             ============================================================ -->
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <span class="hero-badge">✨ Escola de programação web</span>
+                <h1>Domine o <span class="text-gradient">Flexbox</span> e crie layouts modernos</h1>
+                <p class="hero-subtitle">
+                    Aprenda HTML e CSS do zero com aulas práticas, projetos reais
+                    e uma metodologia pensada para iniciantes.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#cursos" class="btn btn-primary">Ver cursos</a>
+                    <a href="#recursos" class="btn btn-outline">Conhecer recursos</a>
+                </div>
+            </div>
+
+            <!-- Caixa visual simulando uma ilustração sobre Flexbox -->
+            <div class="hero-visual">
+                <div class="visual-header">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                    <span class="visual-title">flex-container.css</span>
+                </div>
+                <div class="visual-body">
+                    <div class="visual-item">
+                        <span class="visual-icon">📐</span>
+                        <span>display: flex</span>
+                    </div>
+                    <div class="visual-item">
+                        <span class="visual-icon">↔️</span>
+                        <span>justify-content</span>
+                    </div>
+                    <div class="visual-item">
+                        <span class="visual-icon">↕️</span>
+                        <span>align-items</span>
+                    </div>
+                    <div class="visual-item">
+                        <span class="visual-icon">📏</span>
+                        <span>gap</span>
+                    </div>
+                    <div class="visual-item">
+                        <span class="visual-icon">🔁</span>
+                        <span>flex-wrap</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             RECURSOS / BENEFÍCIOS
+             4 cards explicando vantagens do Flexbox
+             ============================================================ -->
+        <section id="recursos" class="section benefits">
+            <div class="container">
+                <header class="section-header">
+                    <h2>Por que aprender Flexbox?</h2>
+                    <p>O Flexbox simplifica o alinhamento e a distribuição de elementos na web.</p>
+                </header>
+
+                <div class="benefits-list">
+                    <article class="benefit-card">
+                        <span class="benefit-icon">🎯</span>
+                        <h3>Alinhamento fácil</h3>
+                        <p>Centralize, distribua e alinhe elementos sem gambiarras com float ou position.</p>
+                    </article>
+
+                    <article class="benefit-card">
+                        <span class="benefit-icon">📦</span>
+                        <h3>Layouts responsivos</h3>
+                        <p>Com flex-wrap e gap, seus layouts se adaptam a qualquer tamanho de tela.</p>
+                    </article>
+
+                    <article class="benefit-card">
+                        <span class="benefit-icon">🧭</span>
+                        <h3>Controle de direção</h3>
+                        <p>Mude de horizontal para vertical com uma única propriedade: flex-direction.</p>
+                    </article>
+
+                    <article class="benefit-card">
+                        <span class="benefit-icon">⚙️</span>
+                        <h3>Menos gambiarra</h3>
+                        <p>Código mais limpo, previsível e fácil de manter do que soluções antigas.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             CURSOS
+             6 cards de cursos (Flexbox, não Grid!)
+             ============================================================ -->
+        <section id="cursos" class="section courses">
+            <div class="container">
+                <header class="section-header">
+                    <h2>Nossos cursos</h2>
+                    <p>Trilha completa do básico ao projeto final, 100% na prática.</p>
+                </header>
+
+                <div class="courses-grid">
+                    <article class="course-card">
+                        <span class="course-icon">📄</span>
+                        <h3>HTML Básico</h3>
+                        <p>Estruture páginas com tags semânticas e boas práticas.</p>
+                        <span class="course-level">Iniciante</span>
+                        <a href="#" class="btn btn-small">Saiba mais</a>
+                    </article>
+
+                    <article class="course-card">
+                        <span class="course-icon">🎨</span>
+                        <h3>CSS Essencial</h3>
+                        <p>Estilize elementos com cores, tipografia e espaçamento.</p>
+                        <span class="course-level">Iniciante</span>
+                        <a href="#" class="btn btn-small">Saiba mais</a>
+                    </article>
+
+                    <article class="course-card course-featured">
+                        <span class="course-icon">⚡</span>
+                        <h3>Flexbox na Prática</h3>
+                        <p>Domine display, direction, justify, align e muito mais.</p>
+                        <span class="course-level">Intermediário</span>
+                        <a href="#" class="btn btn-small">Saiba mais</a>
+                    </article>
+
+                    <article class="course-card">
+                        <span class="course-icon">📱</span>
+                        <h3>Responsividade</h3>
+                        <p>Crie sites que funcionam em celular, tablet e desktop.</p>
+                        <span class="course-level">Intermediário</span>
+                        <a href="#" class="btn btn-small">Saiba mais</a>
+                    </article>
+
+                    <article class="course-card">
+                        <span class="course-icon">🔧</span>
+                        <h3>JavaScript DOM</h3>
+                        <p>Interatividade básica: eventos, seleção e manipulação.</p>
+                        <span class="course-level">Intermediário</span>
+                        <a href="#" class="btn btn-small">Saiba mais</a>
+                    </article>
+
+                    <article class="course-card">
+                        <span class="course-icon">🏆</span>
+                        <h3>Projeto Final</h3>
+                        <p>Monte uma landing page completa usando tudo que aprendeu.</p>
+                        <span class="course-level">Avançado</span>
+                        <a href="#" class="btn btn-small">Saiba mais</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             ESTATÍSTICAS
+             4 blocos numéricos
+             ============================================================ -->
+        <section class="section stats">
+            <div class="container">
+                <div class="stats-list">
+                    <article class="stat-item">
+                        <strong class="stat-number">+500</strong>
+                        <span class="stat-label">alunos</span>
+                    </article>
+                    <article class="stat-item">
+                        <strong class="stat-number">+80</strong>
+                        <span class="stat-label">projetos</span>
+                    </article>
+                    <article class="stat-item">
+                        <strong class="stat-number">24</strong>
+                        <span class="stat-label">aulas práticas</span>
+                    </article>
+                    <article class="stat-item">
+                        <strong class="stat-number">100%</strong>
+                        <span class="stat-label">CSS puro</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             PASSOS DE APRENDIZADO
+             Boa seção para demonstrar order
+             ============================================================ -->
+        <section class="section steps">
+            <div class="container">
+                <header class="section-header">
+                    <h2>Como funciona o aprendizado</h2>
+                    <p>Siga estes passos para dominar o Flexbox do zero.</p>
+                </header>
+
+                <div class="steps-list">
+                    <article class="step step-1">
+                        <span class="step-number">01</span>
+                        <h3>Entender o container</h3>
+                        <p>Aprenda o que é display: flex e quem são os itens flex.</p>
+                    </article>
+
+                    <article class="step step-2">
+                        <span class="step-number">02</span>
+                        <h3>Entender os eixos</h3>
+                        <p>Descubra a diferença entre eixo principal e eixo cruzado.</p>
+                    </article>
+
+                    <article class="step step-3">
+                        <span class="step-number">03</span>
+                        <h3>Alinhar elementos</h3>
+                        <p>Use justify-content e align-items para posicionar tudo.</p>
+                    </article>
+
+                    <article class="step step-4">
+                        <span class="step-number">04</span>
+                        <h3>Criar layouts reais</h3>
+                        <p>Monte navbars, heroes e footers com Flexbox na prática.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             DEPOIMENTOS
+             Boa seção para demonstrar align-self
+             ============================================================ -->
+        <section class="section testimonials">
+            <div class="container">
+                <header class="section-header">
+                    <h2>O que dizem nossos alunos</h2>
+                    <p>Histórias reais de quem aprendeu Flexbox conosco.</p>
+                </header>
+
+                <div class="testimonials-list">
+                    <article class="testimonial testimonial-a">
+                        <p class="testimonial-text">"Nunca imaginei que alinhar elementos fosse tão simples. O Flexbox mudou minha forma de escrever CSS!"</p>
+                        <footer class="testimonial-author">
+                            <span class="author-avatar">👩‍💻</span>
+                            <div>
+                                <strong>Mariana Silva</strong>
+                                <span>Estudante de TI</span>
+                            </div>
+                        </footer>
+                    </article>
+
+                    <article class="testimonial testimonial-b">
+                        <p class="testimonial-text">"As aulas ao vivo, descomentando o CSS linha a linha, foram o que fez tudo clicar na minha cabeça."</p>
+                        <footer class="testimonial-author">
+                            <span class="author-avatar">👨‍🎓</span>
+                            <div>
+                                <strong>Lucas Ferreira</strong>
+                                <span>Desenvolvedor júnior</span>
+                            </div>
+                        </footer>
+                    </article>
+
+                    <article class="testimonial testimonial-c">
+                        <p class="testimonial-text">"Montei minha primeira landing page responsiva sem usar nenhum framework. Recomendo demais!"</p>
+                        <footer class="testimonial-author">
+                            <span class="author-avatar">👩‍🏫</span>
+                            <div>
+                                <strong>Ana Costa</strong>
+                                <span>Professora de informática</span>
+                            </div>
+                        </footer>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer id="contato" class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <strong>⚡ Flex Academy</strong>
+                <p>Escola de programação web — HTML, CSS e Flexbox para todos.</p>
+            </div>
+
+            <nav class="footer-links">
+                <a href="#inicio">Início</a>
+                <a href="#recursos">Recursos</a>
+                <a href="#cursos">Cursos</a>
+                <a href="#">Política de privacidade</a>
+            </nav>
+
+            <div class="footer-social">
+                <a href="#" aria-label="GitHub">🐙</a>
+                <a href="#" aria-label="YouTube">▶️</a>
+                <a href="#" aria-label="Instagram">📷</a>
+                <a href="#" aria-label="LinkedIn">💼</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Flex Academy. Material didático — Kleber Lucas — Senac Barretos — HTML &amp; CSS puro.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

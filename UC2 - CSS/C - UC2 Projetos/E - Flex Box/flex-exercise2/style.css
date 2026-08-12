@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .topo {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .menu {
+    display: flex;
+    gap: 100px;
+  }
+  
+  .menu a {
+    color: white;
+    text-decoration: none;
+    margin-right: 16px;
+  }
+  
+  .botao {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+  }
+

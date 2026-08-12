@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 30px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .galeria {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    gap: 50px;
+    flex-wrap: wrap;
+
+
+  }
+  
+  .card {
+    width: 180px;
+    height: 120px;
+    background-color: #dceeff;
+    border: 2px solid #4b8edb;
+    border-radius: 10px;
+    margin: 8px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

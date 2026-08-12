@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Revisão HTML e CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <!--^ css/ -> Representa "entrar na pasta CSS", pois o arquivo style.css está lá dentro -->
+
+</head>
+<body>
+    <!--* Cabeçalho da página -->
+    <header class="cabecalho">
+        <div class="logo">
+            CodeLab
+        </div>
+        <nav class="menu">
+            <!--^ Simbolo de # em links representam saltos no site "Botões que vão para outra área" -->
+            <a href="#inicio">Início</a>
+            <a href="#cursos">Cursos</a>
+            <a href="#sobre">Sobre</a>
+        </nav>
+    </header>
+
+    <!--^ Conteúdo principal ---------------------------------------------------------------------------->
+
+    <main>
+        <!--^ Seção Incial -->
+        <section class= "inicio" id="inicio">
+            <!--* Não usamos espaço em nome de classe -->
+            <div class="inicio-texto">
+                <h1>Aprenda programação de forma simples</h1>
+                <p>
+                    Estude HTML, CSS e programação por meio de aulas práticas e projetos.
+                </p>
+                <a href="cursos" class="botao">Ver cursos</a>
+            </div>
+
+            <!--^ Segundo filho de section.inicio -->
+            <div class="inicio-imagem">
+                <div class="codigo">
+                    <!-- &lt; = less than (Sinal de menor) -->
+                    <!-- &gt; = greater than (Sinal de maior) -->
+                    <p>&lt;html&gt;</p>
+                    <p class="espaco">
+                        &lt;h1&gt;Olá, Mundo!&lt;/h1&gt;
+                    </p>
+                    <p>&lt;html&gt;</p>
+                </div>
+            </div>
+        </section>
+        <!--^ Segunda Seção: Cursos -->
+        <section class="cursos" id="cursos">
+            <h2>Nossos Cursos</h2>
+            <p class="descricao-secao">
+                Escolha uma tecnologia para começar seus cursos
+            </p>
+            <div class="lista-cursos">
+                <!--^ Article - Uma "seção" de texto menor -->
+                <article class="card">
+                    <h3>HTML</h3>
+                    <p>
+                        Aprenda a criar a estrutura e o conteúdo das páginas
+                    </p>
+                    <a href="#">Saiba mais</a>
+                </article>
+                <!--* CSS -------------------------------------------------->
+                <article class="card">
+                    <h3>CSS</h3>
+                    <p>
+                        Aprenda a adicionar cores, tamanhos e estilos
+                    </p>
+                    <a href="#">Saiba mais</a>
+                </article>
+                <!--* Flexbox----------------------------------------------->
+                <article class="card">
+                    <h3>Flexbox</h3>
+                    <p>
+                        Aprenda a organizar elementos usando Display: Flex
+                    </p>
+                    <a href="#">Saiba mais</a>
+                </article>
+            </div>
+        </section>
+        <section class="sobre" id="sobre">
+            <div class="sobre-texto">
+                <h2>Sobre o CodeLab</h2>
+                <p>
+                    A CodeLab é uma escola criada para ajudar estudantes a aprenderem desenvolvimento web.
+                </p>
+                <p>
+                    Nossas aulas utilizam explicações simples, exemplos práticos e pequenos desafios.
+                </p>
+                <div class="sobre-destaque">
+                    <strong>Aprender</strong>
+                    <strong>Praticar</strong>
+                    <strong>Criar</strong>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="rodape">
+        <p>
+            CodeLab - Página criada com HTML e CSS
+        </p>
+    </footer>
+</body>
+</html>

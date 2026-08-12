@@ -1,0 +1,99 @@
+<html lang="pt-BR">
+
+<head>
+	<!--CHARSET - Conjunto de caracteres-->
+	<!--UTF-8 - Padrão brasileiro de digitação, pois tem acentos, ç e outros-->
+	<meta charset="UTF-8" />
+	<title>Revisão</title>
+	<style>
+	
+			/*Comentário no CSS - Anotação*/
+			/*Selecionando pela classe*/
+	
+	body {
+		background-color: #E8EDF2;
+		font-family: Arial;
+	}
+	
+			/*Colocamos o sinal de ponto (.) antes do nome da classe*/
+			/*Sem isso código vai pensar que é a TAG <titulo>*/
+	.titulo {
+		font-size: 48px;
+		color: #2C3947;
+		text-align: center;
+	}
+	
+			/*Selecionando o <ul> que tem a classe "livros"*/
+	.livros {
+		background-color: #547A95;
+		color: white;
+		border-radius: 15px;
+			
+			/*Removendo as bolinhas da lista*/
+			/*none - Nenhum/Nada*/
+		list-style-type: none;
+	}
+	
+			/*Editando o <li> dentro do class="livros"*/
+			/*Quando escrevemos 2 coisas (Por exemplo, separado por espaço. Estaremos editando o da direita que está dentro do da esquerda)*/
+	.livros li{
+		font-size: 20px;
+		text-transform: uppercase;
+	
+			/*Espaço vazio abaixo de cada <li> de 15px*/
+		margin-bottom: 15px;
+	}
+	
+	/*Editando os <img> com o classe .book*/
+	.book{
+			
+			/*width = Largura*/
+		width: 400px;
+			
+			/*height = Altura*/
+		height: 600px;
+			
+			/*Centralizando as imagens (Funciona com divs também)*/
+			/*display: block - Já que a imagem "nasce" como inline*/
+			/*Transformamos ela em "block" para que os espaços ao lado pertençam a ela (imagem) e ela possa ser centralizada*/
+		display: block;
+			
+			/*margin -> Espaços em volta das imagens*/
+			/*O "0" é a margem vertical e "auto" é a margem horizontal*/
+			/*"Auto" ele vai automaticamente equilibrar o espaço vazio entre left e right*/
+		margin: 0 auto;
+	}
+	
+	
+	
+	</style>
+
+</head>
+
+<body>
+
+			<!-- Comentário no HTML - Anotação -->
+	<h1 class= "titulo"> Livros que quero ler </h1>
+			
+			<!-- Lista não ordenada UL - Unordered List -->
+	<ul class="livros">
+			
+			<!-- <li> - Item de lista ou List item -->
+			<!-- Geralmente fica dentro de um <ul> ou <ol> -->
+		<li> Harry Potter e as Relíquias da Morte </li>
+		<li> Alice no País das Maravilhas </li>
+		<li> O Labirinto de Fauno </li>
+	</ul>
+	
+			<!-- hr - Linha horizontal - Horizontal row -->
+<hr>
+	
+	<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8sAqD90eD42MQhkyYghBMvNXCsK4tmQUOGadiAb7XhOEyBY7hiRzrX5RaOEvWxj1fxUruXqXBaFh1bRBoBxxBjySBMHL_3PJc4DoQLiwE1qmioy5AeqRAs9utR5vuPt4yvsA4HHgD/s640/Harry+Potter+e+as+Rel%25C3%25ADquias+da+Morte+%2528J.+K.+Rowling%252C+2012%252C+Editora+Rocco%252C+S%25C3%25A9rie+Harry+Potter%2529.jpg" class="book">
+	<img src="https://www.edipro.com.br/wp-content/uploads/2024/03/CAPA_Alice.jpg" class="book">
+	<img src="https://m.media-amazon.com/images/I/91ygIN4voqL._AC_UF1000,1000_QL80_.jpg" class="book">
+
+
+
+</body>
+
+</html>
