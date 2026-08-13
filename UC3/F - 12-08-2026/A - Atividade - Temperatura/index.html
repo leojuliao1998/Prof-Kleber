@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Temperatura</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="body">
+    <div class="total">
+        <h1>Atividade sobre Temperatura - 12/08/2026</h1>
+
+        <div class="enunciado">
+            <p>Crie o projeto "Temperatura" na UC3.</p>
+            <p>Faça um input para o usuário informar a temperatura atual em °C.</p>
+        </div>
+        
+        <div class="tabela">
+            <table>
+                <tr>
+                    <th>Temperatura</th>
+                    <th>Situação</th>
+                </tr>
+                <tr>
+                    <td>Menor que 10°C</td>
+                    <td>Muito frio</td>
+                </tr>
+                <tr>
+                    <td>De 10°C até 19°C</td>
+                    <td>Frio</td>
+                </tr>
+                <tr>
+                    <td>De 20°C até 29°C</td>
+                    <td>Agradável</td>
+                </tr>
+                <tr>
+                    <td>De 30°C até 39°C</td>
+                    <td>Quente</td>
+                </tr>
+                <tr>
+                    <td>40°C ou mais</td>
+                    <td>Muito quente</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="enunciado2">
+        <p>Além disso, faça com que o <body> mude de imagem de fundo (background-image) dependendo da situação.</p>
+        <p>Desafio extra: receba também o nome da cidade e mostre a temperatura digitada e a situação:</p>
+        <h3>Barretos está com 32°C.</h3>
+        <h3>Situação: Quente.</h3>
+        </div>
+
+        <div class="temperatura">
+            <h1>Temperatura Atual</h1>
+            <form action="">
+                <label for="cidade">Digite o nome da cidade</label>
+                <input type="text" name="cidade" id=cidade>
+
+                <label for="temperatura">Digite a temperatura atual</label>
+                <input type="number" name="temperatura" id=temperatura>
+            </form>
+
+            <button id="verificar" onclick="temperaturaCidade()">Verificar</button>
+            <h1 id="verificacao"></h1>
+            <h1 id="situacao"></h1>
+        </div>
+    </div>
+
+
+    <script src="script/script.js"></script>
+</body>
+</html>

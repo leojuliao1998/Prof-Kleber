@@ -5,6 +5,11 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+h1, th{
+    text-decoration: underline;
+}
+
 .total{
     display: flex;
     width: 50%;
@@ -30,7 +35,6 @@ body{
     flex-direction: column;
     border: 3px solid black;
     border-radius: 10px;
-    
 }
 
 table{
@@ -45,8 +49,28 @@ td, th{
 .calculos{
     display: flex;
     width: 50%;
-    margin:auto;
-    flex-direction:column;
+    margin: auto;
+    flex-direction: column;
     border: 3px solid black;
     border-radius: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+
+button{
+    background-color: rgb(66, 0, 141);
+    color: rgb(255, 40, 40);
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-decoration: underline;
+    width: 200px;
 }
