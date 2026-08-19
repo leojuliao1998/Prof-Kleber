@@ -1,48 +1,49 @@
 let tagPontosPlayer = document.getElementById("pontos-jogador")
 let tagPontosCPU = document.getElementById("pontos-cpu")
 
-let PontosPlayer = 0
-let PontosCPU = 0
+let pontosPlayer = 0
+let pontosMaquina = 0
 
 function jogar(jogada){
     let jogadaGuerreiro = Math.floor(Math.random() * 5)
     let jogadaMaquina = ""
     switch (jogadaGuerreiro){
         case 0:
-            joagadaMaquina = "Guerreiro"
+            jogadaMaquina = "Guerreiro"
             break
         case 1:
-            joagadaMaquina = "Mago"
+            jogadaMaquina = "Mago"
             break
         case 2:
-            joagadaMaquina = "Arqueiro"
+            jogadaMaquina = "Arqueiro"
             break
         case 3:
-            joagadaMaquina = "Ladino"
+            jogadaMaquina = "Ladino"
             break
         case 4:
-            joagadaMaquina = "Paladino"
+            jogadaMaquina = "Paladino"
             break
     }
 
-    let vencedor = PlayerVenceu(jogada, jogadaMaquina)
+    let vencedor = playerVenceu(jogada, jogadaMaquina)
 
     alert("Player jogou: "+ jogada + "\nMáquina jogou: " + jogadaMaquina)
     if (vencedor == "EMPATE"){
         alert ("Deu EMPATE!")
     }
     else if (vencedor == "PLAYER"){
-        alert(vencedor + "venceu!")
+        alert(vencedor + " venceu!")
         pontosPlayer++
     }
     else{
-        alert(vencedor + "venceu!")
-        pontosCPU++
+        alert(vencedor + " venceu!")
+        pontosMaquina++
     }
-    atualizarPLacar()
+    atualizarPlacar()
+        finalJogo(pontosPlayer, pontosMaquina)
 }
 
-function playerVenceu(jogadaP, JogadaCPU){
+function playerVenceu(jogadaP, jogadaCPU){
     if(jogadaP == jogadaCPU){
         return "EMPATE"
     }
@@ -83,5 +84,14 @@ function playerVenceu(jogadaP, JogadaCPU){
 
 function atualizarPlacar(){
     tagPontosPlayer.innerHTML = "Player Pontos: " + pontosPlayer
-    tagPontosCPU.innerHTML = "Player Máquina: " + pontosCPU
+    tagPontosCPU.innerHTML = "Player Máquina: " + pontosMaquina
+}
+
+function finalJogo(){
+    if (pontosPlayer == 5){
+        return "PLAYER GANHOU O JOGO!"
+    }
+    else if(pontosMaquina == 5){
+        return "MÁQUINA GANHOU O JOGO!"
+    }
 }
