@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1 class="titulo">Cinema Do Tião</h1>
+    <div class="container">
+
+        <div class="filmes">
+            <table>
+                <tr>
+                    <th>Código</th>
+                    <th>Nome</th>
+                    <th>Gênero</th>
+                </tr>
+                <tr>
+                    <td>D039</td>
+                    <td>O Poderoso Chefão</td>
+                    <td>Máfia</td>
+                </tr>
+                <tr>
+                    <td>B678</td>
+                    <td>Matrix</td>
+                    <td>Ação</td>
+                </tr>
+                <tr>
+                    <td>D889</td>
+                    <td>O Senhor dos Anéis</td>
+                    <td>Fantasia</td>
+                </tr>
+                <tr>
+                    <td>M912</td>
+                    <td>Interestelar</td>
+                    <td>Ficção Científica</td>
+                </tr>
+                <tr>
+                    <td>G007</td>
+                    <td>O Resgate do Soldado Ryan</td>
+                    <td>Guerra</td>
+                </tr>
+            </table>
+            
+            <select name="filme" id="filme">
+                <option value="0000">Selecione o filme</option>
+                <option value="D039">D039</option>
+                <option value="B678">B678</option>
+                <option value="D889">D889</option>
+                <option value="M912">M912</option>
+                <option value="G007">G007</option>
+            </select>
+        </div>
+
+        <div class="combo">
+            <table>
+                <tr>
+                    <th>Código</th>
+                    <th>Combo</th>
+                    <th>Valor</th>
+                </tr>
+                <tr>
+                    <td>COMBO-005</td>
+                    <td>Doritos + Refri Lata</td>
+                    <td>R$ 15,90</td>
+                </tr>
+                <tr>
+                    <td>COMBO-072</td>
+                    <td>Pipoca Salgada + Copo de Coca Cola</td>
+                    <td>R$ 17,90</td>
+                </tr>
+                <tr>
+                    <td>COMBO-777</td>
+                    <td>Pipoca Doce + Copo de Suco</td>
+                    <td>R$ 14,90</td>
+                </tr>
+                <tr>
+                    <td>COMBO-215</td>
+                    <td>Refil de Pipoca Salgada + 2 Recargas de Refri</td>
+                    <td>R$ 25,90</td>
+                </tr>
+            </table>
+        </div>
+        <select name="combo" id="combo">
+            <option value="0001">Selecione o combo</option>
+            <option value="COMBO-005">COMBO-005</option>
+            <option value="COMBO-072">COMBO-072</option>
+            <option value="COMBO-777">COMBO-777</option>
+            <option value="COMBO-215">COMBO-215</option>
+            <option value="0002">Sem combo</option>
+        </select>
+        
+        <div class="pedido">
+            <h1>Resumo do seu pedido</h1>
+            <p id="resumoPedido"></p>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+<script src="script/script.js"></script>
+</body>
+</html>
