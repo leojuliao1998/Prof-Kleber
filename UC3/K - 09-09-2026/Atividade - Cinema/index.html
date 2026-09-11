@@ -10,6 +10,10 @@
     <h1 class="titulo">Cinema Do Tião</h1>
     <div class="container">
 
+        <div class="diaAtual">
+            <p id="diaAtual"></p>
+        </div>
+
         <div class="filmes">
             <table>
                 <tr>
@@ -52,8 +56,16 @@
                 <option value="M912">M912</option>
                 <option value="G007">G007</option>
             </select>
+            <select name="quantIngresso" id="quantIngresso">
+                <option value="0001">Quantidade de ingressos</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
         </div>
-
+        
         <div class="combo">
             <table>
                 <tr>
@@ -84,12 +96,21 @@
             </table>
         </div>
         <select name="combo" id="combo">
-            <option value="0001">Selecione o combo</option>
+            <option value="0002">Selecione o combo</option>
             <option value="COMBO-005">COMBO-005</option>
             <option value="COMBO-072">COMBO-072</option>
             <option value="COMBO-777">COMBO-777</option>
             <option value="COMBO-215">COMBO-215</option>
-            <option value="0002">Sem combo</option>
+        </select>
+        
+        <select name="quantCombo" id="quantCombo">
+            <option value="0004">Quantidade de combos</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
         </select>
         
         <div class="pedido">
