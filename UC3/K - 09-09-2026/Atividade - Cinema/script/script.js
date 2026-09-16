@@ -1,54 +1,45 @@
-let dataHoje = NewDate()
-let numeroDia = dataHoje.getDay()
-let diaAtual = document.getElementById("diaAtual")
+let data = document.getElementById("data")
 let filme = document.getElementById("filme")
 let quantIngresso = document.getElementById("quantIngresso")
 let combo = document.getElementById("combo")
 let quantCombo = document.getElementById("quantCombo")
 let resumoPedido = document.getElementById("resumoPedido")
+let btn = document.getElementById("btn")
 
-//todo-> Para aparecer o dia no site
-switch (numeroDia) {
-    case 1:
-        day = "Segunda-Feira"
-        break
-    case 2:
-        day = "Terça-Feira"
-        break
-    case 3:
-        day = "Quarta-Feira"
-        break
-    case 4:
-        day = "Quinta-Feira"
-        break
-    case 5:
-        day = "Sexta-Feira"
-        break
-    case 6:
-        day = "Sábado"
-        break
-    case 7:
-        day = "Domingo"
-        break
-}
-diaAtual.innerHTML = "Hoje é " + dataHoje
+let valorIngresso = 0
+let valorCombo = 0
 
-//todo-> Cálculo da quantidade de ingressos
-
-if (day = 1 || 3 || 5){
-    let valorIngresso = dataHoje * quantIngresso
+function calculoIngresso() {
+    //todo-> Cálculo da quantidade de ingressos
+    if (data.value == "01" || data.value == "03" || data.value == "05"){
+        valorIngresso = 32.50 * Number(quantIngresso.value)
+    }
+    else if (data.value == "02" || data.value == "04" || data.value == "06" || data.value == "07"){
+        valorIngresso = 36 * Number(quantIngresso.value)
+    }
 }
 
-else{
-    let valorIngresso = dataHoje * quantIngresso
+function calculoCombo() {
+    //todo-> Cálculo da quantidade de combos
+    if (combo.value == "COMBO-005"){
+        valorCombo = 15.90 * quantCombo
+    }
+    else if (combo.value == "COMBO-072"){
+        valorCombo = 17.90 * quantCombo
+    }
+    else if (combo.value == "COMBO-777"){
+        valorCombo = 14.90 * quantCombo
+    }
+    else if (combo.value == "COMBO-215"){
+        valorCombo = 25.90 * quantCombo
+    }
 }
 
+function calcularTotal() {
+    let valorTotal = 0
+    valorTotal = valorIngresso + valorCombo
+    
+    resumoPedido.innerHTML = "O seu filme escolhido foi " + filme.value + " com a quantidade de " + quantIngresso.value + " ingresso(s)." + "<br>" + " O combo escolhido foi o " + combo.value + " com a quantidade de " + quantCombo.value + " unidade(s)." + "<br>" + " O valor total ficou em R$ " + valorTotal.value
+}
 
-
-
-
-
-
-
-
-//todo-> Cálculo da quantidade de combos
+btn.addEventListener('click', calcularTotal)

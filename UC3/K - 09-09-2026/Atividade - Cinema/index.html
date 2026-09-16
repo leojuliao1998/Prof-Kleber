@@ -11,7 +11,16 @@
     <div class="container">
 
         <div class="diaAtual">
-            <p id="diaAtual"></p>
+            <select name="data" id="data">
+                <option value="00">Selecione o dia da semana</option>
+                <option value="01">Segunda-Feira</option>
+                <option value="02">Terça-Feira</option>
+                <option value="03">Quarta-Feira</option>
+                <option value="04">Quinta-Feira</option>
+                <option value="05">Sexta-Feira</option>
+                <option value="06">Sábado</option>
+                <option value="07">Domingo</option>
+            </select>
         </div>
 
         <div class="filmes">
@@ -50,11 +59,11 @@
             
             <select name="filme" id="filme">
                 <option value="0000">Selecione o filme</option>
-                <option value="D039">D039</option>
-                <option value="B678">B678</option>
-                <option value="D889">D889</option>
-                <option value="M912">M912</option>
-                <option value="G007">G007</option>
+                <option value="D039">O Poderoso Chefão</option>
+                <option value="B678">Matrix</option>
+                <option value="D889">O Senhor dos Anéis</option>
+                <option value="M912">Interestelar</option>
+                <option value="G007">O Resgate do Soldado Ryan</option>
             </select>
             <select name="quantIngresso" id="quantIngresso">
                 <option value="0001">Quantidade de ingressos</option>
@@ -112,6 +121,10 @@
             <option value="4">4</option>
             <option value="5">5</option>
         </select>
+
+        <div>
+            <button class="btn" id="btn">Calcular valor</button>
+        </div>
         
         <div class="pedido">
             <h1>Resumo do seu pedido</h1>
