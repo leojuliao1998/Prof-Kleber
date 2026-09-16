@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Prompt", sans-serif;
+}
+
+.container{
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    /* * A altura mínima = Tela toda (O site usa a tela toda verticalmente) */
+    /* ~ De início um <div> usa toda a horizontal (width) porém a altura (height) ele só usa o que ele "ocupa" para usar todo aplicamos '100vh' */
+    min-height: 100vh;
+    background: #020024;
+    background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 50%, rgba(0, 212, 255, 1) 100%);
+    padding: 10px;
+}
+
+.task-app{
+    /* ^ A diferença entre width e max-width=
+    * width é a largura que ele "TENTARÁ" alcançar (100% a largura do pai dele o .container) mas quando usa-se o "max-width" junto o "max" será o limite dele */
+    /* todo Se a tela do dispositivo for menor que 540px de largura, então ele obdecerá a regra de 100% width. SENÃO ele limitará a 540px */
+    width: 100%;
+    max-width: 540px;
+    background-color: white;
+    /* ! 100px = topo / auto = direita / 20px = baixo / auto = esquerda */
+    /* ? Centralizando (auto) */
+    margin: 100px auto 20px;
+    /* & 40px = topo / 30px = direita / 70px = baixo / 30px = esquerda */
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+
+}
