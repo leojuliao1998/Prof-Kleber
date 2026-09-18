@@ -37,3 +37,85 @@ body{
     border-radius: 10px;
 
 }
+
+.task-app h2{
+    color: #7776B3;
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.task-app h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+input{
+    /* ^ Flex 1 = Já que o pai deles (.row) é flex. O input flex 1 representa tamanho comum para ele */
+    flex: 1;
+    border: none;
+    outline: none; /* Outline é uma borda extra*/
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background-color: #ff5945;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul li{
+    list-style: none;
+    font-size: 18px;
+    padding: 12px 8px 12px 50px;
+    /* ^ Não permite o usuário selecionar o texto da tarefa */
+    user-select: none;
+    cursor: pointer;
+    /* ^ Posicionamento relativo = Quase igual ao comum (Sem definir position). Porém aqui ele permite posicionar à vontade e tem um EFEITO ESPECIAL quando algum item dentro dele é position absolute */
+    position: relative;
+}
+
+/* ^  Dois "dois pontos" :: - Pseudo Elemento
+^ É quase como uma 'tag fake' colocado ANTES E DENTRO do <li> (A esquerda)   */
+ul li::before{
+    /* ^ Content = 'Conteudo':
+    * O que estará escrito dentro da tag fake <fake>~aqui~</fake> */
+    content: '';
+    /* ^ O pai dele <li> é relative!! */
+    position: absolute;
+    /* ^ Altura e largura do elemento */
+    height: 28px;
+    width: 28px;
+    background-image: url("../img/desmarcado.png");
+    background-size: cover;
+    background-position: center;
+    /* ^ Posicionando o elemento com top e left*/
+    top: 12px;
+    left: 8px;
+    transition: all 0.4s;
+}
+
+/* ^ para os <li> com classe 'checked' */
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+/* ^ Antes dos <li> marcados */
+ul li.checked::before{
+    background-image: url("../img/marcado.png");
+}
