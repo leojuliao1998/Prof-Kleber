@@ -39,7 +39,7 @@ function calcularTotal() {
     let valorTotal = 0
     valorTotal = valorIngresso + valorCombo
     
-    resumoPedido.innerHTML = "O seu filme escolhido foi " + filme.value + " com a quantidade de " + quantIngresso.value + " ingresso(s)." + "<br>" + " O combo escolhido foi o " + combo.value + " com a quantidade de " + quantCombo.value + " unidade(s)." + "<br>" + " O valor total ficou em R$ " + valorTotal.value
+    resumoPedido.innerHTML = "O seu filme escolhido foi " + filme.value + " com a quantidade de " + quantIngresso.value + " ingresso(s)." + "<br>" + " O combo escolhido foi o " + combo.value + " com a quantidade de " + quantCombo.value + " unidade(s)." + "<br>" + " O valor total ficou em R$ " + valorTotal
 }
 
 btn.addEventListener('click', calcularTotal)
