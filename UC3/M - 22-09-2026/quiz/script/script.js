@@ -43,7 +43,7 @@ let pontos = 0
 
 // * Mostrar pergunta atual
 function mostrarPergunta(){
-    // * A variável 'perguntaAtual' será usada pcomo indíce na lista de perguntas
+    // * A variável 'perguntaAtual' será usada como indíce na lista de perguntas
     let pergunta2 = perguntas[perguntaAtual]
 
     // * Edita o <p> com o número da pergunta atual
@@ -92,6 +92,7 @@ function responder(resposta){
     let pergunta = perguntas[perguntaAtual]
 
     if (resposta == pergunta.correta){
+        pontos++
         tagResultado.innerText = "✅ Resposta Correta!"
         tagResultado.style.color = "var(--cor-acerto)"
     }
@@ -114,5 +115,26 @@ function responder(resposta){
     botaoProxima.style.display = "block"
 }
 
+function proximaPergunta(){
+    // * Aumenta a varíavel para a próxima pergunta
+    perguntaAtual++
+
+    // *  Mas precisamos checar para ele não ir para frente infinito. (Pergunta 50 se só existir 4)
+    if (perguntaAtual < perguntas.length){
+        mostrarPergunta()
+    }
+    else{
+        finalizarQuiz()
+    }
+}
+
+function finalizarQuiz(){
+    tagNumero.innerHTML = "Quiz finalizado!"
+    tagPergunta.innerHTML = "Você acertou " + pontos + " de " + perguntas.length + " perguntas";
+
+    tagAlternativas.innerHTML = ""
+    tagResultado.innerHTML = "🎉 Obrigado por jogar!"
+    botaoProxima.style.display = "none"
+}
 
 mostrarPergunta()

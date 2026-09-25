@@ -1,0 +1,104 @@
+:root{    
+    --cor-principal: #6c5ce7;
+    --cor-fundo: #181825;
+    --cor-card: #252538;
+    --cor-acerto: #2ecc71;
+    --cor-texto: #ffffff;
+    --cor-erro: #e74c3c;
+    --fonte-tamanho: 16px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.quiz-filmes{
+    width: 600px;
+    padding: 30px;
+    background-color: var(--cor-card);
+    border-radius: 15px;
+}
+
+h1{
+    text-align: center;
+    color: var(--cor-principal);
+}
+
+#numero-filme{
+    color: #aaa;
+}
+
+#alternativas{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.alternativa, #proximo{
+
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+
+    font-size: var(--fonte-tamanho);
+    cursor: pointer;
+}
+
+.alternativa{
+    background-color: white;
+    color: #222;
+    text-align: center;
+}
+
+.alternativa:hover{
+    background-color: var(--cor-principal);
+    color: white;
+}
+
+#text-final{
+    font-weight: bold;
+    min-height: 20px;
+    font-size: 25px
+}
+
+#proximo{
+    background-color: var(--cor-principal);
+    color: white;
+    display: none;
+}
+
+@media (max-width: 650px){
+    body{
+        padding: 15px;
+    }
+    .quiz-filmes{
+        width: 100%;
+        padding: 20px;
+    }
+    h1{
+        font-size: 25px;
+    }
+    #text-final{
+        font-size: 19px;
+    }
+    
+}
+
+#img-filme{
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 540px;
+    height: 250px;
+}
