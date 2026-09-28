@@ -1,21 +1,25 @@
 const filmes = [
     {
-        image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9A50qaA5zV3AeyrPpiULKVAtddBnxBn47py3gWll_gjQtWiDby9TZV8sxh4VhMKptjPmi011dHeAaYhK6Ofh-LWBM18g1wudw04-SkaAp1wrkZg68NwtXvoKiPJNh4hOUq1G1Hdnp_zjn/s1600/3009257683_1_13_k3d8dxV8.gif",
+        // image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9A50qaA5zV3AeyrPpiULKVAtddBnxBn47py3gWll_gjQtWiDby9TZV8sxh4VhMKptjPmi011dHeAaYhK6Ofh-LWBM18g1wudw04-SkaAp1wrkZg68NwtXvoKiPJNh4hOUq1G1Hdnp_zjn/s1600/3009257683_1_13_k3d8dxV8.gif",
+        image: "./imagens/A-HarryPotter.jpg",
         alternativas: ["Percy Jackson", "Indiana Jones", "A Casa Monstro", "Harry Potter"],
         correta: 3
     },
     {
-        image: "https://deliriumnerd.com/wp-content/uploads/2023/10/coralinecreepyparents.0.jpg",
+        // image: "https://deliriumnerd.com/wp-content/uploads/2023/10/coralinecreepyparents.0.jpg",
+        image: "./imagens/B-Coraline.jpg",
         alternativas: ["Coraline", "A Volta dos Que Não Foram", "Superman", "Resident Evil"],
         correta: 0
     },
     {
-        image: "https://s2.glbimg.com/VISWYqOhB7qUxMMNrB2iEXAc7Bs=/s.glbimg.com/og/rg/f/original/2017/01/06/percy620.gif",
+        // image: "https://s2.glbimg.com/VISWYqOhB7qUxMMNrB2iEXAc7Bs=/s.glbimg.com/og/rg/f/original/2017/01/06/percy620.gif",
+        image: "./imagens/C-PercyJackson.jpg",
         alternativas: ["O Senhor dos Anéis", "Homem Aranha", "Percy Jackson", "Eragon"],
         correta: 2
     },
     {
-        image: "https://i.pinimg.com/736x/ca/19/96/ca1996ff7fe278283111ba8a067119da.jpg",
+        // image: "https://i.pinimg.com/736x/ca/19/96/ca1996ff7fe278283111ba8a067119da.jpg",
+        image: "./imagens/D-Crepúsculo.jpg",
         alternativas: ["Fallen", "Crepúsculo", "Sombras da Noite", "Harry Potter"],
         correta: 1
     }

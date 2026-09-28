@@ -1,7 +1,7 @@
 :root{    
-    --cor-principal: #6c5ce7;
-    --cor-fundo: #181825;
-    --cor-card: #252538;
+    --cor-principal: #8650cc;
+    --cor-fundo: #210533;
+    --cor-card: #221858;
     --cor-acerto: #2ecc71;
     --cor-texto: #ffffff;
     --cor-erro: #e74c3c;
@@ -29,6 +29,10 @@ body{
     padding: 30px;
     background-color: var(--cor-card);
     border-radius: 15px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1{
@@ -42,7 +46,8 @@ h1{
 
 #alternativas{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    white-space: nowrap;
     gap: 15px;
 }
 
@@ -57,9 +62,10 @@ h1{
 }
 
 .alternativa{
-    background-color: white;
-    color: #222;
+    background-color: rgb(186, 138, 216);
+    color: #000000;
     text-align: center;
+    text-decoration: underline;
 }
 
 .alternativa:hover{
@@ -99,6 +105,6 @@ h1{
 #img-filme{
     border: 2px solid black;
     border-radius: 10px;
-    width: 540px;
-    height: 250px;
+    width: 550px;
+    height: 300px;
 }
