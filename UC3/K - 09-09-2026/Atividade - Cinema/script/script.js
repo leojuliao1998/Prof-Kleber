@@ -22,24 +22,35 @@ function calculoIngresso() {
 function calculoCombo() {
     //todo-> Cálculo da quantidade de combos
     if (combo.value == "COMBO-005"){
-        valorCombo = 15.90 * quantCombo
+        valorCombo = 15.90 * Number(quantCombo.value)
+        descricaoCombo = "Doritos + Refri Lata"
     }
     else if (combo.value == "COMBO-072"){
-        valorCombo = 17.90 * quantCombo
+        valorCombo = 17.90 * Number(quantCombo.value)
+        descricaoCombo = "Pipoca Salgada + Copo de Coca Cola"
     }
     else if (combo.value == "COMBO-777"){
-        valorCombo = 14.90 * quantCombo
+        valorCombo = 14.90 * Number(quantCombo.value)
+        descricaoCombo = "Pipoca Doce + Copo de Suco"
     }
     else if (combo.value == "COMBO-215"){
-        valorCombo = 25.90 * quantCombo
+        valorCombo = 25.90 * Number(quantCombo.value)
+        descricaoCombo = "Refil de Pipoca Salgada + 2 Recargas de Refri"
+    }
+    else {
+        valorCombo = 0
+        descricaoCombo = "Nenhum combo"
     }
 }
 
 function calcularTotal() {
-    let valorTotal = 0
-    valorTotal = valorIngresso + valorCombo
+    calculoIngresso()
+    calculoCombo()
+    let valorTotal = valorIngresso + valorCombo
+
+    let nomeFilme = filme.options[filme.selectedIndex].text
     
-    resumoPedido.innerHTML = "O seu filme escolhido foi " + filme.value + " com a quantidade de " + quantIngresso.value + " ingresso(s)." + "<br>" + " O combo escolhido foi o " + combo.value + " com a quantidade de " + quantCombo.value + " unidade(s)." + "<br>" + " O valor total ficou em R$ " + valorTotal
+    resumoPedido.innerHTML = "O seu filme escolhido foi " + nomeFilme + " com a quantidade de " + quantIngresso.value + " ingresso(s)." + "<br>" + " O combo escolhido foi o " + combo.value + " (" + descricaoCombo + ") com a quantidade de " + quantCombo.value + " unidade(s)." + "<br>" + " O valor total ficou em R$ " + valorTotal.toFixed(2) + "."
 }
 
 btn.addEventListener('click', calcularTotal)
