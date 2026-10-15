@@ -1,0 +1,21 @@
+ACADEMIA / LEONARDO
+
+Titan Fitness
+ 
+#171717 - preto
+#E53935 - vermelho
+#757575 - cinza
+
+Projeto Prático — Desenvolvimento de Site Empresarial
+Cada um receberá, por meio de sorteio, uma empresa fictícia para a qual deverá desenvolver um site utilizando HTML, CSS e JavaScript.
+ 
+Requisitos:
+ 
+Utilizar o nome e o segmento da empresa sorteada.
+Respeitar a paleta de cores definida para a empresa.
+Desenvolver um site com pelo menos 4 seções.
+Implementar um menu de navegação funcional.
+Criar pelo menos uma funcionalidade interativa com JavaScript.
+Organizar os arquivos do projeto em pastas.
+ 
+Importante: O aluno deverá decidir quais informações, imagens, serviços e funcionalidades fazem sentido para a empresa recebida, simulando o desenvolvimento de um site para um cliente real.
