@@ -11,15 +11,16 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 header{
     position: sticky;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 47px;
-    z-index: 10000;
+    /* z-index: 10000; */
     background-color: #612d2c;
     border: 1px solid #613e3d;
 }
@@ -58,18 +59,21 @@ a{
 }
 
 .imagem-homem{
-    width: 100vw;
-    height: 100vw;
+    width: 100%;
     display: block;
 }
 
 .container{
     display: flex;
     flex-direction: column;
+    width: 100vw;
+    height: 100vh;
 }
 
 h1{
     display: flex;
     position: relative;
     right: -1%;
+    width: 100vw;
+
 }
