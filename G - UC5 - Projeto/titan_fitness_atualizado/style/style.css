@@ -11,6 +11,7 @@
     --accent-red: #E53935;
     --gray-text: #757575;
     --white: #FFFFFF;
+    --azul: #009FC9;
 }
 
 body {
@@ -43,13 +44,26 @@ header {
 .logo a {
     font-size: 24px;
     font-weight: 800;
-    color: var(--white);
     text-decoration: none;
     letter-spacing: 1px;
 }
 
-.logo span {
+.logo .titan-text {
+    color: var(--white);
+    transition: color 0.3s ease;
+}
+
+.logo .titan-text:hover {
     color: var(--accent-red);
+}
+
+.logo .fitness-text {
+    color: var(--accent-red);
+    transition: color 0.3s ease;
+}
+
+.logo .fitness-text:hover {
+    color: var(--white);
 }
 
 .menu1, .menu2 {
@@ -91,16 +105,17 @@ a:hover {
     border-radius: 4px;
     font-weight: 600;
 }
-
 .btn-cadastre:hover {
-    background-color: #c62828;
+    background-color: #c5312f;
+    color: rgb(238, 227, 227);
 }
 
 .hero {
     position: relative;
     height: 80vh;
     min-height: 500px;
-    background: url('../imagens/1.jpg') center/cover no-repeat;
+    background: center/cover no-repeat;
+    transition: background-image 0.3s ease-in-out;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -140,6 +155,7 @@ a:hover {
 
 .btn-cta {
     background-color: var(--accent-red);
+    box-shadow: 1px 1px 20px var(--accent-red);
     color: var(--white);
     padding: 16px 36px;
     font-size: 16px;
@@ -148,12 +164,13 @@ a:hover {
     text-transform: uppercase;
     letter-spacing: 1px;
     display: inline-block;
-    transition: transform 0.2s ease, background-color 0.3s ease;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .btn-cta:hover {
     transform: translateY(-3px);
-    background-color: #c62828;
+    background-color: var(--azul);
+    box-shadow: 1px 1px 20px var(--azul);
     color: var(--white);
 }
 
@@ -178,8 +195,9 @@ a:hover {
     padding: 40px 30px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     transition: transform 0.3s ease, border-color 0.3s ease;
+    box-shadow: 1px 1px 20px var(--azul);
 }
 
 .card:hover {
@@ -188,18 +206,20 @@ a:hover {
 }
 
 .card.highlight {
-    border-color: var(--accent-red);
+    border-color: var(--azul);
 }
 
 .card-icon {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 20px;
+    width: 190px;
+    height: 190px;
+    margin-bottom: 40px;
 }
 
 .card-icon img {
     width: 100%;
     height: 100%;
+    border-radius: 30px;
+    box-shadow: 3px 3px 25px white;
     object-fit: contain;
 }
 
@@ -217,9 +237,9 @@ a:hover {
 }
 
 .card-link {
-    color: var(--accent-red);
+    color: var(--azul);
     font-weight: 600;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .btn-whats {
