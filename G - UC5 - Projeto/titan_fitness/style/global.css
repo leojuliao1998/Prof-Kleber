@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-dark: #171717;
+    --accent-red: #E53935;
+    --gray-text: #757575;
+    --white: #FFFFFF;
+    --azul: #009FC9;
+}
+
+body {
+    font-family: "Prompt", sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header & Navegação */
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: rgba(23, 23, 23, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(117, 117, 117, 0.2);
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+/* Logo com Hover Independente */
+.logo a {
+    font-size: 24px;
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.logo .titan-text {
+    color: var(--white);
+    transition: color 0.3s ease;
+}
+
+.logo .titan-text:hover {
+    color: var(--accent-red);
+}
+
+.logo .fitness-text {
+    color: var(--accent-red);
+    transition: color 0.3s ease;
+}
+
+.logo .fitness-text:hover {
+    color: var(--white);
+}
+
+.menu1, .menu2 {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-red);
+}
+
+.btn-cadastre {
+    background-color: var(--accent-red);
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.btn-cadastre:hover {
+    background-color: #c5312f;
+    color: rgb(238, 227, 227);
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid rgba(117, 117, 117, 0.2);
+    color: var(--gray-text);
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+}

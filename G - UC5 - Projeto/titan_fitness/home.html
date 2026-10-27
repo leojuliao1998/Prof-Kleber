@@ -5,68 +5,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Titan Fitness</title>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/global.css">
+    <link rel="stylesheet" href="style/home.css">
 </head>
 
 <body>
     <header>
-        <nav>
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="home.html">
+                    <span class="titan-text">TITAN</span> <span class="fitness-text">FITNESS</span>
+                </a>
+            </div>
             <ul class="menu1">
-                <li><a href="home.html">Home</a></li>
+                <li><a href="home.html" class="active">Home</a></li>
                 <li><a href="academias.html">Academias</a></li>
                 <li><a href="planos.html">Planos</a></li>
                 <li><a href="sobrenos.html">Sobre Nós</a></li>
             </ul>
             <ul class="menu2">
                 <li><a href="login.html">Login</a></li>
-                <li><a href="cadastre-se.html">Cadastre-se</a></li>
+                <li><a href="cadastre-se.html" class="btn-cadastre">Cadastre-se</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="container">
-        <h1>Titan Fitness</h1>
-    </div>
-
-    <div class="container">
-        <img src="imagens/1.jpg" alt="" class="imagem-homem">
-    </div>
-
-    <div class="texto_debaixo">
-        <div class="icone">
-            <a href="sobrenos.html"><img src="https://cdn-icons-gif.flaticon.com/19035/19035710.gif" alt=""
-                    class="animation"></a>
-            <h2>A academia mais high-tech do Brasil</h2>
-            <p>Com aparelhos de última geração, fabricado pelas empresas mais tecnológicas do mundo no quesito de
-                musculação</p>
+    <section class="hero" id="heroSlider">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>TITAN FITNESS</h1>
+            <p>A ACADEMIA MAIS HIGH-TECH E COMPLETA PARA O SEU EVOLUIR</p>
+            <a href="https://wa.me/5517999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20aula%20experimental." target="_blank" class="btn-cta">Agende sua Aula Experimental</a>
         </div>
-        <div class="icone">
-            <a href="academias.html"><img src="https://cdn-icons-gif.flaticon.com/12707/12707730.gif" alt=""
-                    class="animation"></a>
-            <h2>Aparelhos de alta performance por um preço que cabe no seu bolso</h2>
-            <p>Tenha acesso a equipamentos que fazem seu exercício ficar mais confortavél e seguro para seu treino</p>
+    </section>
+
+    <section class="diferenciais">
+        <div class="cards-container">
+            <div class="card highlight">
+                <div class="card-icon">
+                    <img src="./imagens/4.gif" alt="Tecnologia High-Tech">
+                </div>
+                <h2>A mais high-tech do Brasil</h2>
+                <p>Aparelhos de última geração fabricados pelas marcas líderes globais em biomecânica e musculação.</p>
+                <a href="sobrenos.html" class="card-link">Saiba Mais &rarr;</a>
+            </div>
+
+            <div class="card highlight">
+                <div class="card-icon">
+                    <img src="./imagens/5.gif" alt="Alta Performance">
+                </div>
+                <h2>Alta performance acessível</h2>
+                <p>Equipamentos de elite projetados para garantir segurança, conforto e máximo rendimento no seu treino.</p>
+                <a href="academias.html" class="card-link">Conheça as Unidades &rarr;</a>
+            </div>
+
+            <div class="card highlight">
+                <div class="card-icon">
+                    <img src="./imagens/6.gif" alt="Agende uma Aula">
+                </div>
+                <h2>Experimente de Graça</h2>
+                <p>Agende uma aula experimental sem compromisso e venha conhecer a estrutura da Titan Fitness.</p>
+                <a href="https://wa.me/5517999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20aula%20experimental." target="_blank" class="card-link btn-whats">Agendar via WhatsApp &rarr;</a>
+            </div>
         </div>
-        <div class="icone">
-            <a href="cadastre-se.html"><img src="https://cdn-icons-gif.flaticon.com/17581/17581674.gif" alt=""
-                    class="animation"></a>
-            <h2>Venha conhecer e agende uma aula</h2>
-            <p>Faça seu cadastro e agende uma aula experimental na unidade mais próxima de você</p>
-        </div>
-    </div>
+    </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <footer>
+        <p>&copy; 2026 Titan Fitness. Todos os direitos reservados.</p>
+    </footer>
 
     <script src="script/script.js"></script>
 </body>

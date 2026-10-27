@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style/global.css">
+    <link rel="stylesheet" href="style/login.css">
+<body>
+    <header>
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="home.html">
+                    <span class="titan-text">TITAN</span> <span class="fitness-text">FITNESS</span>
+                </a>
+            </div>
+            <ul class="menu1">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="academias.html">Academias</a></li>
+                <li><a href="planos.html">Planos</a></li>
+                <li><a href="sobrenos.html">Sobre Nós</a></li>
+            </ul>
+            <ul class="menu2">
+                <li><a href="login.html" class="active">Login</a></li>
+                <li><a href="cadastre-se.html" class="btn-cadastre">Cadastre-se</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="login-section">
+        <div class="login-card">
+            <h1>Acesse sua Conta</h1>
+            <p>Entre com seu e-mail e senha para gerenciar seu treino</p>
+
+            <form class="login-form">
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="Digite seu melhor e-mail" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" placeholder="Digite sua melhor senha" required>
+                </div>
+                <a href="home.html" type="submit" class="btn-entrar">Entrar</a>
+            </form>
+
+            <div class="divider">
+                <span>ou</span>
+            </div>
+            <a href="cadastre-se.html" class="btn-ir-cadastro">Cadastre-se</a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Titan Fitness. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
