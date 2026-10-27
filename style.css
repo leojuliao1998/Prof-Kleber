@@ -1,22 +1,70 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
-    background-color: rgba(165, 42, 42, 0.717);
-    color:antiquewhite;
+body {
+    background-color: #5c2020;
+    color: antiquewhite;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-h1{
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.container-projetos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-projeto {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid rgb(255, 191, 107);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.card-projeto:hover {
+    transform: translateY(-2px);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.card-projeto h2 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+.card-projeto a {
+    display: inline-block;
+    color: rgb(255, 191, 107);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.card-projeto a:hover {
     text-decoration: underline;
 }
 
-a{
-    color: rgb(255, 191, 107);
-    font-style: italic;
-
+.card-projeto .data {
+    font-size: 0.85rem;
+    color: #e0d0c0;
+    opacity: 0.8;
 }
