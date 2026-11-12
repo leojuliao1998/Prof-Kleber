@@ -1,0 +1,53 @@
+## Ver qual branch está
+git branch
+
+## Visualizar todas as Branchs do projeto
+git branch -a
+
+
+## Criar branch
+git switch -c feature-login
+ou
+git checkout -b feature-login
+
+-c = create
+
+## Trocar de Branch
+git switch main
+
+## Enviando branch nova para o GitHub (primeira vez)
+
+git push -u origin feature-login
+
+## Depois é apenas usar git push normal
+
+
+# Após trabalhar na branch, precisa unir com a main
+git switch main
+git pull
+git merge feature-login
+
+
+
+## Se quiser deletar a branch (localmente)
+git branch -d feature-login
+## Se quiser deletar no GitHub
+git push origin --delete feature-login
+
+
+# Comando que faz add e commit ao mesmo tempo
+git commit -am "mensagem"
+
+
+# Ver histórico
+
+git log --oneline
+
+# Voltar no tempo em algum commit 
+
+git switch --detach c35d012
+
+# Voltar ao presente
+
+git switch main
+
