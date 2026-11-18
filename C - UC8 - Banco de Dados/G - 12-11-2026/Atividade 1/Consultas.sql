@@ -61,3 +61,9 @@ SELECT * FROM Livros WHERE quantidade < 10 ORDER BY quantidade;
 
 -- ! 23 - Consulta de valor de R$ 60.00 do mais caro para o mais barato
 SELECT * FROM Livros WHERE preco > 60 ORDER BY preco DESC;
+
+-- ! 24 - Consulta de livros do mesmo gênero dos 5 novos livros cadastrados, mostrando título, gênero e preço
+SELECT titulo, genero, preco FROM Livros WHERE genero = "Gótico" ORDER BY titulo;
+
+-- ! 25 - Consulta de livros antes do anos 2000 do mais antigo para o mais novo
+SELECT * FROM Livros WHERE ano_publicacao < 2000 ORDER BY ano_publicacao;
